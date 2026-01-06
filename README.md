@@ -1,8 +1,8 @@
 # Python Complete Course
 
-![Bidur Sapkota](https://www.bidursapkota.com.np/_next/image?url=%2Fimages%2Fprofile3.png&w=48&q=75 "Bidur Sapkota - Developer")&nbsp;[Bidur Sapkota](https://www.bidursapkota.com.np/)
+![Bidur Sapkota](https://www.bidursapkota.com.np/images/gravatar.webp "Bidur Sapkota - Developer")&nbsp;[Bidur Sapkota](https://www.bidursapkota.com.np/)
 
-![Python Complete Course by Bidur Sapkota](/test.png "Python Complete Course – Blog by Bidur Sapkota")
+![Python Complete Course by Bidur Sapkota](/images/12-python-post-1200.webp "Python Complete Course – Blog by Bidur Sapkota")
 
 ## Table of Contents
 
@@ -531,12 +531,6 @@ s
 s[0] = 'x'
 ```
 
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    <ipython-input-26-976942677f11> in <module>()
-          1 # Let's try to change the first letter to 'x'
     ----> 2 s[0] = 'x'
 
 
@@ -1479,11 +1473,6 @@ It can't be stressed enough that tuples are immutable. To drive that point home:
 t[0]= 'change'
 ```
 
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    <ipython-input-8-1257c0aa9edd> in <module>()
     ----> 1 t[0]= 'change'
 
 
