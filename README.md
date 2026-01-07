@@ -55,37 +55,32 @@ Now let's start with some basic arithmetic.
 ```python
 # Addition
 2+1
+# 3
 ```
-
-    3
 
 ```python
 # Subtraction
 2-1
+# 1
 ```
-
-    1
 
 ```python
 # Multiplication
 2*2
+# 4
 ```
-
-    4
 
 ```python
 # Division
 3/2
+# 1.5
 ```
-
-    1.5
 
 ```python
 # Floor Division
 7//4
+# 1
 ```
-
-    1
 
 **Whoa! What just happened? Last time I checked, 7 divided by 4 equals 1.75 not 1!**
 
@@ -96,9 +91,8 @@ The reason we get this result is because we are using "_floor_" division. The //
 ```python
 # Modulo
 7%4
+# 3
 ```
-
-    3
 
 4 goes into 7 once, with a remainder of 3. The % operator returns the remainder after division.
 
@@ -107,30 +101,26 @@ The reason we get this result is because we are using "_floor_" division. The //
 ```python
 # Powers
 2**3
+# 8
 ```
-
-    8
 
 ```python
 # Can also do roots this way
 4**0.5
+# 2.0
 ```
-
-    2.0
 
 ```python
 # Order of Operations followed in Python
 2 + 10 * 10 + 3
+# 105
 ```
-
-    105
 
 ```python
 # Can use parentheses to specify orders
 (2+10) * (10+3)
+# 156
 ```
-
-    156
 
 ---
 
@@ -144,10 +134,7 @@ The reason we get this result is because we are using "_floor_" division. The //
 
 - names can not start with a number
 - names can not contain spaces, use \_ intead
-- names can not contain any of these symbols:
-
-      :'",<>/?|\!@#%^&*~-+
-
+- names can not contain any of these symbols: `:'",<>/?|\!@#%^&*~-+`
 - it's considered best practice ([PEP8](https://www.python.org/dev/peps/pep-0008/#function-and-variable-names)) that names are lowercase with underscores
 - avoid using Python built-in keywords like `list` and `str`
 - avoid using the single characters `l` (lowercase letter el), `O` (uppercase letter oh) and `I` (uppercase letter eye) as they can be confused with `1` and `0`
@@ -158,23 +145,8 @@ Python uses _dynamic typing_, meaning you can reassign variables to different da
 
 ```python
 my_dogs = 2
-```
-
-```python
-my_dogs
-```
-
-    2
-
-```python
 my_dogs = ['Sammy', 'Frankie']
 ```
-
-```python
-my_dogs
-```
-
-    ['Sammy', 'Frankie']
 
 ### Pros and Cons of Dynamic Typing
 
@@ -196,31 +168,18 @@ Variable assignment follows `name = object`, where a single equals sign `=` is a
 a = 5
 ```
 
-```python
-a
-```
-
-    5
-
 Here we assigned the integer object `5` to the variable name `a`.<br>Let's assign `a` to something else:
 
 ```python
 a = 10
 ```
 
-```python
-a
-```
-
-    10
-
 You can now use `a` in place of the number `10`:
 
 ```python
 a + a
+# 20
 ```
-
-    20
 
 ## Reassigning Variables
 
@@ -228,35 +187,20 @@ Python lets you reassign variables with a reference to the same object.
 
 ```python
 a = a + 10
+# 20
 ```
-
-```python
-a
-```
-
-    20
 
 There's actually a shortcut for this. Python lets you add, subtract, multiply and divide numbers with reassignment using `+=`, `-=`, `*=`, and `/=`.
 
 ```python
 a += 10
+# 30
 ```
-
-```python
-a
-```
-
-    30
 
 ```python
 a *= 2
+# 60
 ```
-
-```python
-a
-```
-
-    60
 
 ## Determining variable type with `type()`
 
@@ -273,19 +217,12 @@ You can check what type of object is assigned to a variable using Python's built
 
 ```python
 type(a)
-```
+# int
 
-    int
-
-```python
 a = (1,2)
-```
-
-```python
 type(a)
+# tuple
 ```
-
-    tuple
 
 ## Simple Exercise
 
@@ -295,13 +232,9 @@ This shows how variables make calculations more readable and easier to follow.
 my_income = 100
 tax_rate = 0.1
 my_taxes = my_income * tax_rate
-```
-
-```python
 my_taxes
+# 10.0
 ```
-
-    10.0
 
 ---
 
@@ -322,41 +255,41 @@ To create a string in Python you need to use either single quotes or double quot
 ```python
 # Single word
 'hello'
+# 'hello'
 ```
-
-    'hello'
 
 ```python
 # Entire phrase
 'This is also a string'
+# 'This is also a string'
 ```
-
-    'This is also a string'
 
 ```python
 # We can also use double quote
 "String built with double quotes"
+# 'String built with double quotes'
 ```
-
-    'String built with double quotes'
 
 ```python
 # Be careful with quotes!
 ' I'm using single quotes, but this will create an error'
 ```
 
-      File "<ipython-input-4-da9a34b3dc31>", line 2
+**Output:**
+
+```text
+    File "<ipython-input-4-da9a34b3dc31>", line 2
         ' I'm using single quotes, but this will create an error'
             ^
     SyntaxError: invalid syntax
+```
 
 The reason for the error above is because the single quote in <code>I'm</code> stopped the string. You can use combinations of double and single quotes to get the complete statement.
 
 ```python
 "Now I'm ready to use the single quotes inside a string!"
+# "Now I'm ready to use the single quotes inside a string!"
 ```
-
-    "Now I'm ready to use the single quotes inside a string!"
 
 ## Printing a String
 
@@ -365,9 +298,8 @@ Using terminal with just a string in a command will automatically output strings
 ```python
 # We can simply declare a string
 'Hello World'
+# 'Hello World'
 ```
-
-    'Hello World'
 
 We can use a print statement to print a string.
 
@@ -379,6 +311,9 @@ print('\n')
 print('See what I mean?')
 ```
 
+**Output:**
+
+```text
     Hello World 1
     Hello World 2
     Use
@@ -386,6 +321,7 @@ print('See what I mean?')
 
 
     See what I mean?
+```
 
 ## String Basics
 
@@ -393,9 +329,8 @@ We can also use a function called len() to check the length of a string!
 
 ```python
 len('Hello World')
+# 11
 ```
-
-    11
 
 Python's built-in len() function counts all of the characters in the string, including spaces and punctuation.
 
@@ -410,165 +345,115 @@ In Python, we use brackets <code>[]</code> after an object to call its index. We
 s = 'Hello World'
 ```
 
-```python
-#Check
-s
-```
-
-    'Hello World'
-
-```python
-# Print the object
-print(s)
-```
-
-    Hello World
-
 Let's start indexing!
 
 ```python
 # Show first element (in this case a letter)
 s[0]
-```
+# 'H'
 
-    'H'
-
-```python
 s[1]
-```
+# 'e'
 
-    'e'
-
-```python
 s[2]
+# 'l'
 ```
-
-    'l'
 
 We can use a <code>:</code> to perform _slicing_ which grabs everything up to a designated point. For example:
 
 ```python
 # Grab everything past the first term all the way to the length of s which is len(s)
 s[1:]
+# 'ello World'
 ```
-
-    'ello World'
 
 ```python
 # Note that there is no change to the original s
 s
+# 'Hello World'
 ```
-
-    'Hello World'
 
 ```python
 # Grab everything UP TO the 3rd index
 s[:3]
+# 'Hel'
 ```
-
-    'Hel'
 
 Note the above slicing. Here we're telling Python to grab everything from 0 up to 3. It doesn't include the 3rd index. You'll notice this a lot in Python, where statements and are usually in the context of "up to, but not including".
 
 ```python
 #Everything
 s[:]
+# 'Hello World'
 ```
-
-    'Hello World'
 
 We can also use negative indexing to go backwards.
 
 ```python
 # Last letter (one index behind 0 so it loops back around)
 s[-1]
+# 'd'
 ```
-
-    'd'
 
 ```python
 # Grab everything but the last letter
 s[:-1]
+# 'Hello Worl'
 ```
-
-    'Hello Worl'
 
 We can also use index and slice notation to grab elements of a sequence by a specified step size (the default is 1). For instance we can use two colons in a row and then a number specifying the frequency to grab elements. For example:
 
 ```python
 # Grab everything, but go in steps size of 1
 s[::1]
+# 'Hello World'
 ```
-
-    'Hello World'
 
 ```python
 # Grab everything, but go in step sizes of 2
 s[::2]
+# 'HloWrd'
 ```
-
-    'HloWrd'
 
 ```python
 # We can use this to print a string backwards
 s[::-1]
+# 'dlroW olleH'
 ```
-
-    'dlroW olleH'
 
 ## String Properties
 
 It's important to note that strings have an important property known as _immutability_. This means that once a string is created, the elements within it can not be changed or replaced. For example:
 
 ```python
-s
-```
-
-    'Hello World'
-
-```python
 # Let's try to change the first letter to 'x'
 s[0] = 'x'
 ```
 
+**Output:**
+
+```text
     ----> 2 s[0] = 'x'
 
-
     TypeError: 'str' object does not support item assignment
+```
 
 Notice how the error tells us directly what we can't do, change the item assignment!
 
 Something we _can_ do is concatenate strings!
 
 ```python
-s
-```
-
-    'Hello World'
-
-```python
 # Concatenate strings!
 s + ' concatenate me!'
+# 'Hello World concatenate me!'
 ```
-
-    'Hello World concatenate me!'
 
 ```python
 # We can reassign s completely though!
 s = s + ' concatenate me!'
-```
-
-```python
 print(s)
+# Hello World concatenate me!
 ```
-
-    Hello World concatenate me!
-
-```python
-s
-```
-
-    'Hello World concatenate me!'
 
 We can use the multiplication symbol to create repetition!
 
@@ -578,9 +463,8 @@ letter = 'z'
 
 ```python
 letter*10
+# 'zzzzzzzzzz'
 ```
-
-    'zzzzzzzzzz'
 
 ## Basic Built-in String methods
 
@@ -595,38 +479,28 @@ Where parameters are extra arguments we can pass into the method. Don't worry if
 Here are some examples of built-in methods in strings:
 
 ```python
-s
-```
-
-    'Hello World concatenate me!'
-
-```python
 # Upper Case a string
 s.upper()
+# 'HELLO WORLD CONCATENATE ME!'
 ```
-
-    'HELLO WORLD CONCATENATE ME!'
 
 ```python
 # Lower case
 s.lower()
+# 'hello world concatenate me!'
 ```
-
-    'hello world concatenate me!'
 
 ```python
 # Split a string by blank space (this is the default)
 s.split()
+# ['Hello', 'World', 'concatenate', 'me!']
 ```
-
-    ['Hello', 'World', 'concatenate', 'me!']
 
 ```python
 # Split by a specific element (doesn't include the element that was split on)
 s.split('W')
+# ['Hello ', 'orld concatenate me!']
 ```
-
-    ['Hello ', 'orld concatenate me!']
 
 There are many more methods than the ones covered here. Visit the Advanced String section to find out more!
 
@@ -638,9 +512,8 @@ The easiest way to show this is through an example:
 
 ```python
 'Insert another string with curly brackets: {}'.format('The inserted string')
+# 'Insert another string with curly brackets: The inserted string'
 ```
-
-    'Insert another string with curly brackets: The inserted string'
 
 We will revisit this string formatting topic in later sections when we are building our projects!
 
@@ -654,12 +527,14 @@ We will revisit this string formatting topic in later sections when we are build
 
 String formatting lets you inject items into a string rather than trying to chain items together using commas or string concatenation. As a quick comparison, consider:
 
-    player = 'Thomas'
-    points = 33
+```python
+player = 'Thomas'
+points = 33
 
-    'Last night, '+player+' scored '+str(points)+' points.'  # concatenation
+'Last night, '+player+' scored '+str(points)+' points.'  # concatenation
 
-    f'Last night, {player} scored {points} points.'          # string formatting
+f'Last night, {player} scored {points} points.'          # string formatting
+```
 
 There are three ways to perform string formatting.
 
@@ -675,26 +550,23 @@ You can use <code>%s</code> to inject strings into your print statements. The mo
 
 ```python
 print("I'm going to inject %s here." %'something')
+# I'm going to inject something here.
 ```
-
-    I'm going to inject something here.
 
 You can pass multiple items by placing them inside a tuple after the `%` operator.
 
 ```python
 print("I'm going to inject %s text here, and %s text here." %('some','more'))
+# I'm going to inject some text here, and more text here.
 ```
-
-    I'm going to inject some text here, and more text here.
 
 You can also pass variable names:
 
 ```python
 x, y = 'some', 'more'
 print("I'm going to inject %s text here, and %s text here."%(x,y))
+# I'm going to inject some text here, and more text here.
 ```
-
-    I'm going to inject some text here, and more text here.
 
 ### Format conversion methods.
 
@@ -702,31 +574,28 @@ It should be noted that two methods <code>%s</code> and <code>%r</code> convert 
 
 ```python
 print('He said his name was %s.' %'Fred')
+# He said his name was Fred.
 print('He said his name was %r.' %'Fred')
+# He said his name was 'Fred'.
 ```
-
-    He said his name was Fred.
-    He said his name was 'Fred'.
 
 As another example, `\t` inserts a tab into a string.
 
 ```python
 print('I once caught a fish %s.' %'this \tbig')
+# I once caught a fish this 	big.
 print('I once caught a fish %r.' %'this \tbig')
+# I once caught a fish 'this \tbig'.
 ```
-
-    I once caught a fish this 	big.
-    I once caught a fish 'this \tbig'.
 
 The `%s` operator converts whatever it sees into a string, including integers and floats. The `%d` operator converts numbers to integers first, without rounding. Note the difference below:
 
 ```python
 print('I wrote %s programs today.' %3.75)
+# I wrote 3.75 programs today.
 print('I wrote %d programs today.' %3.75)
+# I wrote 3 programs today.
 ```
-
-    I wrote 3.75 programs today.
-    I wrote 3 programs today.
 
 ### Padding and Precision of Floating Point Numbers
 
@@ -734,35 +603,18 @@ Floating point numbers use the format <code>%5.2f</code>. Here, <code>5</code> w
 
 ```python
 print('Floating point numbers: %5.2f' %(13.144))
-```
-
-    Floating point numbers: 13.14
-
-```python
+# Floating point numbers: 13.14
 print('Floating point numbers: %1.0f' %(13.144))
-```
-
-    Floating point numbers: 13
-
-```python
+# Floating point numbers: 13
 print('Floating point numbers: %1.5f' %(13.144))
-```
-
-    Floating point numbers: 13.14400
-
-```python
+# Floating point numbers: 13.14400
 print('Floating point numbers: %10.2f' %(13.144))
-```
-
-    Floating point numbers:      13.14
-
-```python
+# Floating point numbers:      13.14
 print('Floating point numbers: %25.2f' %(13.144))
+# Floating point numbers:                     13.14
 ```
 
-    Floating point numbers:                     13.14
-
-For more information on string formatting with placeholders visit https://docs.python.org/3/library/stdtypes.html#old-string-formatting
+For more information on string formatting with placeholders visit `https://docs.python.org/3/library/stdtypes.html#old-string-formatting`
 
 ### Multiple Formatting
 
@@ -770,23 +622,23 @@ Nothing prohibits using more than one conversion tool in the same print statemen
 
 ```python
 print('First: %s, Second: %5.2f, Third: %r' %('hi!',3.1415,'bye!'))
+# First: hi!, Second:  3.14, Third: 'bye!'
 ```
-
-    First: hi!, Second:  3.14, Third: 'bye!'
 
 ## Formatting with the `.format()` method
 
 A better way to format objects into your strings for print statements is with the string `.format()` method. The syntax is:
 
-    'String here {} then also {}'.format('something1','something2')
+```python
+'String here {} then also {}'.format('something1','something2')
+```
 
 For example:
 
 ```python
 print('This is a string with an {}'.format('insert'))
+# This is a string with an insert
 ```
-
-    This is a string with an insert
 
 ### The .format() method has several advantages over the %s placeholder method:
 
@@ -794,28 +646,27 @@ print('This is a string with an {}'.format('insert'))
 
 ```python
 print('The {2} {1} {0}'.format('fox','brown','quick'))
+# The quick brown fox
 ```
-
-    The quick brown fox
 
 #### 2. Inserted objects can be assigned keywords:
 
 ```python
 print('First Object: {a}, Second Object: {b}, Third Object: {c}'.format(a=1,b='Two',c=12.3))
+# First Object: 1, Second Object: Two, Third Object: 12.3
 ```
-
-    First Object: 1, Second Object: Two, Third Object: 12.3
 
 #### 3. Inserted objects can be reused, avoiding duplication:
 
 ```python
 print('A %s saved is a %s earned.' %('penny','penny'))
-# vs.
-print('A {p} saved is a {p} earned.'.format(p='penny'))
-```
+# A penny saved is a penny earned.
 
-    A penny saved is a penny earned.
-    A penny saved is a penny earned.
+# vs.
+
+print('A {p} saved is a {p} earned.'.format(p='penny'))
+# A penny saved is a penny earned.
+```
 
 ### Alignment, padding and precision with `.format()`
 
@@ -827,9 +678,13 @@ print('{0:8} | {1:9}'.format('Apples', 3.))
 print('{0:8} | {1:9}'.format('Oranges', 10))
 ```
 
+**Output:**
+
+```text
     Fruit    | Quantity
     Apples   |       3.0
     Oranges  |        10
+```
 
 By default, `.format()` aligns text to the left, numbers to the right. You can pass an optional `<`,`^`, or `>` to set a left, center or right alignment:
 
@@ -838,8 +693,12 @@ print('{0:<8} | {1:^8} | {2:>8}'.format('Left','Center','Right'))
 print('{0:<8} | {1:^8} | {2:>8}'.format(11,22,33))
 ```
 
+**Output:**
+
+```text
     Left     |  Center  |    Right
     11       |    22    |       33
+```
 
 You can precede the aligment operator with a padding character
 
@@ -848,22 +707,25 @@ print('{0:=<8} | {1:-^8} | {2:.>8}'.format('Left','Center','Right'))
 print('{0:=<8} | {1:-^8} | {2:.>8}'.format(11,22,33))
 ```
 
+**Output:**
+
+```text
     Left==== | -Center- | ...Right
     11====== | ---22--- | ......33
+```
 
 Field widths and float precision are handled in a way similar to placeholders. The following two print statements are equivalent:
 
 ```python
 print('This is my ten-character, two-decimal number:%10.2f' %13.579)
+# This is my ten-character, two-decimal number:     13.58
 print('This is my ten-character, two-decimal number:{0:10.2f}'.format(13.579))
+# This is my ten-character, two-decimal number:     13.58
 ```
-
-    This is my ten-character, two-decimal number:     13.58
-    This is my ten-character, two-decimal number:     13.58
 
 Note that there are 5 spaces following the colon, and 5 characters taken up by 13.58, for a total of ten characters.
 
-For more information on the string `.format()` method visit https://docs.python.org/3/library/string.html#formatstrings
+For more information on the string `.format()` method visit `https://docs.python.org/3/library/string.html#formatstrings`
 
 ## Formatted String Literals (f-strings)
 
@@ -873,17 +735,15 @@ Introduced in Python 3.6, f-strings offer several benefits over the older `.form
 name = 'Fred'
 
 print(f"He said his name is {name}.")
+# He said his name is Fred.
 ```
-
-    He said his name is Fred.
 
 Pass `!r` to get the string representation:
 
 ```python
 print(f"He said his name is {name!r}")
+# He said his name is 'Fred'
 ```
-
-    He said his name is 'Fred'
 
 #### Float formatting follows `"result: {value:{width}.{precision}}"`
 
@@ -892,35 +752,32 @@ Where with the `.format()` method you might see `{value:10.4f}`, with f-strings 
 ```python
 num = 23.45678
 print("My 10 character, four decimal number is:{0:10.4f}".format(num))
+# My 10 character, four decimal number is:   23.4568
 print(f"My 10 character, four decimal number is:{num:{10}.{6}}")
+# My 10 character, four decimal number is:   23.4568
 ```
-
-    My 10 character, four decimal number is:   23.4568
-    My 10 character, four decimal number is:   23.4568
 
 Note that with f-strings, _precision_ refers to the total number of digits, not just those following the decimal. This fits more closely with scientific notation and statistical analysis. Unfortunately, f-strings do not pad to the right of the decimal, even if precision allows it:
 
 ```python
 num = 23.45
 print("My 10 character, four decimal number is:{0:10.4f}".format(num))
+# My 10 character, four decimal number is:   23.4500
 print(f"My 10 character, four decimal number is:{num:{10}.{6}}")
+# My 10 character, four decimal number is:     23.45
 ```
-
-    My 10 character, four decimal number is:   23.4500
-    My 10 character, four decimal number is:     23.45
 
 If this becomes important, you can always use `.format()` method syntax inside an f-string:
 
 ```python
 num = 23.45
 print("My 10 character, four decimal number is:{0:10.4f}".format(num))
+# My 10 character, four decimal number is:   23.4500
 print(f"My 10 character, four decimal number is:{num:10.4f}")
+# My 10 character, four decimal number is:   23.4500
 ```
 
-    My 10 character, four decimal number is:   23.4500
-    My 10 character, four decimal number is:   23.4500
-
-For more info on formatted string literals visit https://docs.python.org/3/reference/lexical_analysis.html#f-strings
+For more info on formatted string literals visit `https://docs.python.org/3/reference/lexical_analysis.html#f-strings`
 
 That is the basics of string formatting!
 
@@ -933,14 +790,6 @@ That is the basics of string formatting!
 # Lists
 
 Earlier when discussing strings we introduced the concept of a _sequence_ in Python. Lists can be thought of the most general version of a _sequence_ in Python. Unlike strings, they are mutable, meaning the elements inside a list can be changed!
-
-In this section we will learn about:
-
-    1.) Creating lists
-    2.) Indexing and Slicing Lists
-    3.) Basic List Methods
-    4.) Nesting Lists
-    5.) Introduction to List Comprehensions
 
 Lists are constructed with brackets [] and commas separating every element in the list.
 
@@ -961,9 +810,8 @@ Just like strings, the len() function will tell you how many items are in the se
 
 ```python
 len(my_list)
+# 4
 ```
-
-    4
 
 ### Indexing and Slicing
 
@@ -976,52 +824,42 @@ my_list = ['one','two','three',4,5]
 ```python
 # Grab element at index 0
 my_list[0]
+# 'one'
 ```
-
-    'one'
 
 ```python
 # Grab index 1 and everything past it
 my_list[1:]
+# ['two', 'three', 4, 5]
 ```
-
-    ['two', 'three', 4, 5]
 
 ```python
 # Grab everything UP TO index 3
 my_list[:3]
+# ['one', 'two', 'three']
 ```
-
-    ['one', 'two', 'three']
 
 We can also use + to concatenate lists, just like we did for strings.
 
 ```python
 my_list + ['new item']
+# ['one', 'two', 'three', 4, 5, 'new item']
 ```
-
-    ['one', 'two', 'three', 4, 5, 'new item']
 
 Note: This doesn't actually change the original list!
 
 ```python
 my_list
+# ['one', 'two', 'three', 4, 5]
 ```
-
-    ['one', 'two', 'three', 4, 5]
 
 You would have to reassign the list to make the change permanent.
 
 ```python
 # Reassign
 my_list = my_list + ['add new item permanently']
+# ['one', 'two', 'three', 4, 5, 'add new item permanently']
 ```
-
-```python
-my_list
-```
-
-    ['one', 'two', 'three', 4, 5, 'add new item permanently']
 
 We can also use the \* for a duplication method similar to strings:
 
@@ -1030,6 +868,9 @@ We can also use the \* for a duplication method similar to strings:
 my_list * 2
 ```
 
+**Output:**
+
+```python
     ['one',
      'two',
      'three',
@@ -1042,13 +883,13 @@ my_list * 2
      4,
      5,
      'add new item permanently']
+```
 
 ```python
 # Again doubling not permanent
 my_list
+# ['one', 'two', 'three', 4, 5, 'add new item permanently']
 ```
-
-    ['one', 'two', 'three', 4, 5, 'add new item permanently']
 
 ## Basic List Methods
 
@@ -1066,48 +907,42 @@ Use the **append** method to permanently add an item to the end of a list:
 ```python
 # Append
 list1.append('append me!')
+# [1, 2, 3, 'append me!']
 ```
+
+Use the **insert** method to permanently add an item at any position of a list:
 
 ```python
-# Show
-list1
+# Insert 34 at index = 1
+list1.insert(1, 34)
+# [1, 34, 2, 3, 'append me!']
 ```
-
-    [1, 2, 3, 'append me!']
 
 Use **pop** to "pop off" an item from the list. By default pop takes off the last index, but you can also specify which index to pop off. Let's see an example:
 
 ```python
 # Pop off the 0 indexed item
 list1.pop(0)
+# 1
 ```
-
-    1
 
 ```python
 # Show
 list1
+# [2, 3, 'append me!']
 ```
-
-    [2, 3, 'append me!']
 
 ```python
 # Assign the popped element, remember default popped index is -1
 popped_item = list1.pop()
+# 'append me!'
 ```
-
-```python
-popped_item
-```
-
-    'append me!'
 
 ```python
 # Show remaining list
 list1
+# [2, 3]
 ```
-
-    [2, 3]
 
 It should also be noted that lists indexing will return an error if there is no element at that index. For example:
 
@@ -1115,6 +950,9 @@ It should also be noted that lists indexing will return an error if there is no 
 list1[100]
 ```
 
+**Output:**
+
+```text
     ---------------------------------------------------------------------------
 
     IndexError                                Traceback (most recent call last)
@@ -1124,6 +962,7 @@ list1[100]
 
 
     IndexError: list index out of range
+```
 
 We can use the **sort** method and the **reverse** methods to also effect your lists:
 
@@ -1132,33 +971,22 @@ new_list = ['a','e','x','b','c']
 ```
 
 ```python
-#Show
-new_list
-```
-
-    ['a', 'e', 'x', 'b', 'c']
-
-```python
 # Use reverse to reverse order (this is permanent!)
 new_list.reverse()
+# ['c', 'b', 'x', 'e', 'a']  // permanent
 ```
-
-```python
-new_list
-```
-
-    ['c', 'b', 'x', 'e', 'a']
 
 ```python
 # Use sort to sort the list (in this case alphabetical order, but for numbers it will go ascending)
 new_list.sort()
+# ['a', 'b', 'c', 'e', 'x']  // permanent
 ```
 
 ```python
-new_list
+# Sort in descending order
+new_list.sort(reverse=True)
+# ['x', 'e', 'c', 'b', 'a']  // permanent
 ```
-
-    ['a', 'b', 'c', 'e', 'x']
 
 ## Nesting Lists
 
@@ -1174,30 +1002,22 @@ lst_3=[7,8,9]
 
 # Make a list of lists to form a matrix
 matrix = [lst_1,lst_2,lst_3]
+# [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 ```
-
-```python
-# Show
-matrix
-```
-
-    [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 We can again use indexing to grab elements, but now there are two levels for the index. The items in the matrix object, and then the items inside that list!
 
 ```python
 # Grab first item in matrix object
 matrix[0]
+# [1, 2, 3]
 ```
-
-    [1, 2, 3]
 
 ```python
 # Grab first item of the first item in the matrix object
 matrix[0][0]
+# 1
 ```
-
-    1
 
 # List Comprehensions
 
@@ -1208,17 +1028,10 @@ But in case you want to know now, here are a few examples!
 ```python
 # Build a list comprehension by deconstructing a for loop within a []
 first_col = [row[0] for row in matrix]
+# [1, 4, 7]
 ```
-
-```python
-first_col
-```
-
-    [1, 4, 7]
 
 We used a list comprehension here to grab the first element of every row in the matrix object. We will cover this in much more detail later on!
-
-For more advanced methods and features of lists in Python, check out the Advanced Lists section later on in this course!
 
 ---
 
@@ -1229,13 +1042,6 @@ For more advanced methods and features of lists in Python, check out the Advance
 # Dictionaries
 
 We've been learning about _sequences_ in Python but now we're going to switch gears and learn about _mappings_ in Python. If you're familiar with other languages you can think of these Dictionaries as hash tables.
-
-This section will serve as a brief introduction to dictionaries and consist of:
-
-    1.) Constructing a Dictionary
-    2.) Accessing objects from a dictionary
-    3.) Nesting Dictionaries
-    4.) Basic Dictionary Methods
 
 So what are mappings? Mappings are a collection of objects that are stored by a _key_, unlike a sequence that stored objects by their relative position. This is an important distinction, since mappings won't retain order since they have objects defined by a key.
 
