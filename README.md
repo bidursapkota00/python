@@ -1911,3 +1911,2014 @@ l_one[2][0] >= l_two[2]['k1']
 ---
 
 ---
+
+# Comparison Operators
+
+In this lecture we will be learning about Comparison Operators in Python. These operators will allow us to compare variables and output a Boolean value (True or False).
+
+If you have any sort of background in Math, these operators should be very straight forward.
+
+First we'll present a table of the comparison operators and then work through some examples:
+
+<h2> Table of Comparison Operators </h2><p>  In the table below, a=3 and b=4.</p>
+
+<table class="table table-bordered">
+<tr>
+<th style="width:10%">Operator</th><th style="width:45%">Description</th><th>Example</th>
+</tr>
+<tr>
+<td>==</td>
+<td>If the values of two operands are equal, then the condition becomes true.</td>
+<td> (a == b) is not true.</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>If values of two operands are not equal, then condition becomes true.</td>
+<td>(a != b) is true</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>If the value of left operand is greater than the value of right operand, then condition becomes true.</td>
+<td> (a &gt; b) is not true.</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>If the value of left operand is less than the value of right operand, then condition becomes true.</td>
+<td> (a &lt; b) is true.</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>If the value of left operand is greater than or equal to the value of right operand, then condition becomes true.</td>
+<td> (a &gt;= b) is not true. </td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>If the value of left operand is less than or equal to the value of right operand, then condition becomes true.</td>
+<td> (a &lt;= b) is true. </td>
+</tr>
+</table>
+
+Let's now work through quick examples of each of these.
+
+#### Equal
+
+```python
+2 == 2
+```
+
+    True
+
+```python
+1 == 0
+```
+
+    False
+
+Note that <code>==</code> is a <em>comparison</em> operator, while <code>=</code> is an <em>assignment</em> operator.
+
+#### Not Equal
+
+```python
+2 != 1
+```
+
+    True
+
+```python
+2 != 2
+```
+
+    False
+
+#### Greater Than
+
+```python
+2 > 1
+```
+
+    True
+
+```python
+2 > 4
+```
+
+    False
+
+#### Less Than
+
+```python
+2 < 4
+```
+
+    True
+
+```python
+2 < 1
+```
+
+    False
+
+#### Greater Than or Equal to
+
+```python
+2 >= 2
+```
+
+    True
+
+```python
+2 >= 1
+```
+
+    True
+
+#### Less than or Equal to
+
+```python
+2 <= 2
+```
+
+    True
+
+```python
+2 <= 4
+```
+
+    True
+
+**Great! Go over each comparison operator to make sure you understand what each one is saying. But hopefully this was straightforward for you.**
+
+Next we will cover chained comparison operators
+
+---
+
+---
+
+---
+
+# Chained Comparison Operators
+
+An interesting feature of Python is the ability to _chain_ multiple comparisons to perform a more complex test. You can use these chained comparisons as shorthand for larger Boolean Expressions.
+
+In this lecture we will learn how to chain comparison operators and we will also introduce two other important statements in Python: **and** and **or**.
+
+Let's look at a few examples of using chains:
+
+```python
+1 < 2 < 3
+```
+
+    True
+
+The above statement checks if 1 was less than 2 **and** if 2 was less than 3. We could have written this using an **and** statement in Python:
+
+```python
+1<2 and 2<3
+```
+
+    True
+
+The **and** is used to make sure two checks have to be true in order for the total check to be true. Let's see another example:
+
+```python
+1 < 3 > 2
+```
+
+    True
+
+The above checks if 3 is larger than both of the other numbers, so you could use **and** to rewrite it as:
+
+```python
+1<3 and 3>2
+```
+
+    True
+
+It's important to note that Python is checking both instances of the comparisons. We can also use **or** to write comparisons in Python. For example:
+
+```python
+1==2 or 2<3
+```
+
+    True
+
+Note how it was true; this is because with the **or** operator, we only need one _or_ the other to be true. Let's see one more example to drive this home:
+
+```python
+1==1 or 100==1
+```
+
+    True
+
+Great! For an overview of this quick lesson: You should have a comfortable understanding of using **and** and **or** statements as well as reading chained comparison code.
+
+Go ahead and go to the quiz for this section to check your understanding!
+
+# Introduction to Python Statements
+
+In this lecture we will be doing a quick overview of Python Statements. This lecture will emphasize differences between Python and other languages such as C++.
+
+There are two reasons we take this approach for learning the context of Python Statements:
+
+    1.) If you are coming from a different language this will rapidly accelerate your understanding of Python.
+    2.) Learning about statements will allow you to be able to read other languages more easily in the future.
+
+## Python vs Other Languages
+
+Let's create a simple statement that says:
+"If a is greater than b, assign 2 to a and 4 to b"
+
+Take a look at these two if statements (we will learn about building out if statements soon).
+
+**Version 1 (Other Languages)**
+
+    if (a>b){
+        a = 2;
+        b = 4;
+    }
+
+**Version 2 (Python)**
+
+    if a>b:
+        a = 2
+        b = 4
+
+You'll notice that Python is less cluttered and much more readable than the first version. How does Python manage this?
+
+Let's walk through the main differences:
+
+Python gets rid of () and {} by incorporating two main factors: a _colon_ and _whitespace_. The statement is ended with a colon, and whitespace is used (indentation) to describe what takes place in case of the statement.
+
+Another major difference is the lack of semicolons in Python. Semicolons are used to denote statement endings in many other languages, but in Python, the end of a line is the same as the end of a statement.
+
+Lastly, to end this brief overview of differences, let's take a closer look at indentation syntax in Python vs other languages:
+
+## Indentation
+
+Here is some pseudo-code to indicate the use of whitespace and indentation in Python:
+
+**Other Languages**
+
+    if (x)
+        if(y)
+            code-statement;
+    else
+        another-code-statement;
+
+**Python**
+
+    if x:
+        if y:
+            code-statement
+    else:
+        another-code-statement
+
+Note how Python is so heavily driven by code indentation and whitespace. This means that code readability is a core part of the design of the Python language.
+
+Now let's start diving deeper by coding these sort of statements in Python!
+
+## Time to code!
+
+# if, elif, else Statements
+
+<code>if</code> Statements in Python allows us to tell the computer to perform alternative actions based on a certain set of results.
+
+Verbally, we can imagine we are telling the computer:
+
+"Hey if this case happens, perform some action"
+
+We can then expand the idea further with <code>elif</code> and <code>else</code> statements, which allow us to tell the computer:
+
+"Hey if this case happens, perform some action. Else, if another case happens, perform some other action. Else, if _none_ of the above cases happened, perform this action."
+
+Let's go ahead and look at the syntax format for <code>if</code> statements to get a better idea of this:
+
+    if case1:
+        perform action1
+    elif case2:
+        perform action2
+    else:
+        perform action3
+
+## First Example
+
+Let's see a quick example of this:
+
+```python
+if True:
+    print('It was true!')
+```
+
+    It was true!
+
+Let's add in some else logic:
+
+```python
+x = False
+
+if x:
+    print('x was True!')
+else:
+    print('I will be printed in any case where x is not true')
+```
+
+    I will be printed in any case where x is not true
+
+### Multiple Branches
+
+Let's get a fuller picture of how far <code>if</code>, <code>elif</code>, and <code>else</code> can take us!
+
+We write this out in a nested structure. Take note of how the <code>if</code>, <code>elif</code>, and <code>else</code> line up in the code. This can help you see what <code>if</code> is related to what <code>elif</code> or <code>else</code> statements.
+
+We'll reintroduce a comparison syntax for Python.
+
+```python
+loc = 'Bank'
+
+if loc == 'Auto Shop':
+    print('Welcome to the Auto Shop!')
+elif loc == 'Bank':
+    print('Welcome to the bank!')
+else:
+    print('Where are you?')
+```
+
+    Welcome to the bank!
+
+Note how the nested <code>if</code> statements are each checked until a True boolean causes the nested code below it to run. You should also note that you can put in as many <code>elif</code> statements as you want before you close off with an <code>else</code>.
+
+Let's create two more simple examples for the <code>if</code>, <code>elif</code>, and <code>else</code> statements:
+
+```python
+person = 'Sammy'
+
+if person == 'Sammy':
+    print('Welcome Sammy!')
+else:
+    print("Welcome, what's your name?")
+```
+
+    Welcome Sammy!
+
+```python
+person = 'George'
+
+if person == 'Sammy':
+    print('Welcome Sammy!')
+elif person =='George':
+    print('Welcome George!')
+else:
+    print("Welcome, what's your name?")
+```
+
+    Welcome George!
+
+## Indentation
+
+It is important to keep a good understanding of how indentation works in Python to maintain the structure and order of your code. We will touch on this topic again when we start building out functions!
+
+# for Loops
+
+A <code>for</code> loop acts as an iterator in Python; it goes through items that are in a _sequence_ or any other iterable item. Objects that we've learned about that we can iterate over include strings, lists, tuples, and even built-in iterables for dictionaries, such as keys or values.
+
+We've already seen the <code>for</code> statement a little bit in past lectures but now let's formalize our understanding.
+
+Here's the general format for a <code>for</code> loop in Python:
+
+    for item in object:
+        statements to do stuff
+
+The variable name used for the item is completely up to the coder, so use your best judgment for choosing a name that makes sense and you will be able to understand when revisiting your code. This item name can then be referenced inside your loop, for example if you wanted to use <code>if</code> statements to perform checks.
+
+Let's go ahead and work through several example of <code>for</code> loops using a variety of data object types. We'll start simple and build more complexity later on.
+
+## Example 1
+
+Iterating through a list
+
+```python
+# We'll learn how to automate this sort of list in the next lecture
+list1 = [1,2,3,4,5,6,7,8,9,10]
+```
+
+```python
+for num in list1:
+    print(num)
+```
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+
+Great! Hopefully this makes sense. Now let's add an <code>if</code> statement to check for even numbers. We'll first introduce a new concept here--the modulo.
+
+### Modulo
+
+The modulo allows us to get the remainder in a division and uses the % symbol. For example:
+
+```python
+17 % 5
+```
+
+    2
+
+This makes sense since 17 divided by 5 is 3 remainder 2. Let's see a few more quick examples:
+
+```python
+# 3 Remainder 1
+10 % 3
+```
+
+    1
+
+```python
+# 2 Remainder 4
+18 % 7
+```
+
+    4
+
+```python
+# 2 no remainder
+4 % 2
+```
+
+    0
+
+Notice that if a number is fully divisible with no remainder, the result of the modulo call is 0. We can use this to test for even numbers, since if a number modulo 2 is equal to 0, that means it is an even number!
+
+Back to the <code>for</code> loops!
+
+## Example 2
+
+Let's print only the even numbers from that list!
+
+```python
+for num in list1:
+    if num % 2 == 0:
+        print(num)
+```
+
+    2
+    4
+    6
+    8
+    10
+
+We could have also put an <code>else</code> statement in there:
+
+```python
+for num in list1:
+    if num % 2 == 0:
+        print(num)
+    else:
+        print('Odd number')
+```
+
+    Odd number
+    2
+    Odd number
+    4
+    Odd number
+    6
+    Odd number
+    8
+    Odd number
+    10
+
+## Example 3
+
+Another common idea during a <code>for</code> loop is keeping some sort of running tally during multiple loops. For example, let's create a <code>for</code> loop that sums up the list:
+
+```python
+# Start sum at zero
+list_sum = 0
+
+for num in list1:
+    list_sum = list_sum + num
+
+print(list_sum)
+```
+
+    55
+
+Great! Read over the above cell and make sure you understand fully what is going on. Also we could have implemented a <code>+=</code> to perform the addition towards the sum. For example:
+
+```python
+# Start sum at zero
+list_sum = 0
+
+for num in list1:
+    list_sum += num
+
+print(list_sum)
+```
+
+    55
+
+## Example 4
+
+We've used <code>for</code> loops with lists, how about with strings? Remember strings are a sequence so when we iterate through them we will be accessing each item in that string.
+
+```python
+for letter in 'This is a string.':
+    print(letter)
+```
+
+    T
+    h
+    i
+    s
+
+    i
+    s
+
+    a
+
+    s
+    t
+    r
+    i
+    n
+    g
+    .
+
+## Example 5
+
+Let's now look at how a <code>for</code> loop can be used with a tuple:
+
+```python
+tup = (1,2,3,4,5)
+
+for t in tup:
+    print(t)
+```
+
+    1
+    2
+    3
+    4
+    5
+
+## Example 6
+
+Tuples have a special quality when it comes to <code>for</code> loops. If you are iterating through a sequence that contains tuples, the item can actually be the tuple itself, this is an example of _tuple unpacking_. During the <code>for</code> loop we will be unpacking the tuple inside of a sequence and we can access the individual items inside that tuple!
+
+```python
+list2 = [(2,4),(6,8),(10,12)]
+```
+
+```python
+for tup in list2:
+    print(tup)
+```
+
+    (2, 4)
+    (6, 8)
+    (10, 12)
+
+```python
+# Now with unpacking!
+for (t1,t2) in list2:
+    print(t1)
+```
+
+    2
+    6
+    10
+
+Cool! With tuples in a sequence we can access the items inside of them through unpacking! The reason this is important is because many objects will deliver their iterables through tuples. Let's start exploring iterating through Dictionaries to explore this further!
+
+## Example 7
+
+```python
+d = {'k1':1,'k2':2,'k3':3}
+```
+
+```python
+for item in d:
+    print(item)
+```
+
+    k1
+    k2
+    k3
+
+Notice how this produces only the keys. So how can we get the values? Or both the keys and the values?
+
+We're going to introduce three new Dictionary methods: **.keys()**, **.values()** and **.items()**
+
+In Python each of these methods return a _dictionary view object_. It supports operations like membership test and iteration, but its contents are not independent of the original dictionary – it is only a view. Let's see it in action:
+
+```python
+# Create a dictionary view object
+d.items()
+```
+
+    dict_items([('k1', 1), ('k2', 2), ('k3', 3)])
+
+Since the .items() method supports iteration, we can perform _dictionary unpacking_ to separate keys and values just as we did in the previous examples.
+
+```python
+# Dictionary unpacking
+for k,v in d.items():
+    print(k)
+    print(v)
+```
+
+    k1
+    1
+    k2
+    2
+    k3
+    3
+
+If you want to obtain a true list of keys, values, or key/value tuples, you can _cast_ the view as a list:
+
+```python
+list(d.keys())
+```
+
+    ['k1', 'k2', 'k3']
+
+Remember that dictionaries are unordered, and that keys and values come back in arbitrary order. You can obtain a sorted list using sorted():
+
+```python
+sorted(d.values())
+```
+
+    [1, 2, 3]
+
+## Conclusion
+
+We've learned how to use for loops to iterate through tuples, lists, strings, and dictionaries. It will be an important tool for us, so make sure you know it well and understood the above examples.
+
+[More resources](http://www.tutorialspoint.com/python/python_for_loop.htm)
+
+# while Loops
+
+The <code>while</code> statement in Python is one of most general ways to perform iteration. A <code>while</code> statement will repeatedly execute a single statement or group of statements as long as the condition is true. The reason it is called a 'loop' is because the code statements are looped through over and over again until the condition is no longer met.
+
+The general format of a while loop is:
+
+    while test:
+        code statements
+    else:
+        final code statements
+
+Let’s look at a few simple <code>while</code> loops in action.
+
+```python
+x = 0
+
+while x < 10:
+    print('x is currently: ',x)
+    print(' x is still less than 10, adding 1 to x')
+    x+=1
+```
+
+    x is currently:  0
+     x is still less than 10, adding 1 to x
+    x is currently:  1
+     x is still less than 10, adding 1 to x
+    x is currently:  2
+     x is still less than 10, adding 1 to x
+    x is currently:  3
+     x is still less than 10, adding 1 to x
+    x is currently:  4
+     x is still less than 10, adding 1 to x
+    x is currently:  5
+     x is still less than 10, adding 1 to x
+    x is currently:  6
+     x is still less than 10, adding 1 to x
+    x is currently:  7
+     x is still less than 10, adding 1 to x
+    x is currently:  8
+     x is still less than 10, adding 1 to x
+    x is currently:  9
+     x is still less than 10, adding 1 to x
+
+Notice how many times the print statements occurred and how the <code>while</code> loop kept going until the True condition was met, which occurred once x==10. It's important to note that once this occurred the code stopped. Let's see how we could add an <code>else</code> statement:
+
+```python
+x = 0
+
+while x < 10:
+    print('x is currently: ',x)
+    print(' x is still less than 10, adding 1 to x')
+    x+=1
+
+else:
+    print('All Done!')
+```
+
+    x is currently:  0
+     x is still less than 10, adding 1 to x
+    x is currently:  1
+     x is still less than 10, adding 1 to x
+    x is currently:  2
+     x is still less than 10, adding 1 to x
+    x is currently:  3
+     x is still less than 10, adding 1 to x
+    x is currently:  4
+     x is still less than 10, adding 1 to x
+    x is currently:  5
+     x is still less than 10, adding 1 to x
+    x is currently:  6
+     x is still less than 10, adding 1 to x
+    x is currently:  7
+     x is still less than 10, adding 1 to x
+    x is currently:  8
+     x is still less than 10, adding 1 to x
+    x is currently:  9
+     x is still less than 10, adding 1 to x
+    All Done!
+
+# break, continue, pass
+
+We can use <code>break</code>, <code>continue</code>, and <code>pass</code> statements in our loops to add additional functionality for various cases. The three statements are defined by:
+
+    break: Breaks out of the current closest enclosing loop.
+    continue: Goes to the top of the closest enclosing loop.
+    pass: Does nothing at all.
+
+Thinking about <code>break</code> and <code>continue</code> statements, the general format of the <code>while</code> loop looks like this:
+
+    while test:
+        code statement
+        if test:
+            break
+        if test:
+            continue
+    else:
+
+<code>break</code> and <code>continue</code> statements can appear anywhere inside the loop’s body, but we will usually put them further nested in conjunction with an <code>if</code> statement to perform an action based on some condition.
+
+Let's go ahead and look at some examples!
+
+```python
+x = 0
+
+while x < 10:
+    print('x is currently: ',x)
+    print(' x is still less than 10, adding 1 to x')
+    x+=1
+    if x==3:
+        print('x==3')
+    else:
+        print('continuing...')
+        continue
+```
+
+    x is currently:  0
+     x is still less than 10, adding 1 to x
+    continuing...
+    x is currently:  1
+     x is still less than 10, adding 1 to x
+    continuing...
+    x is currently:  2
+     x is still less than 10, adding 1 to x
+    x==3
+    x is currently:  3
+     x is still less than 10, adding 1 to x
+    continuing...
+    x is currently:  4
+     x is still less than 10, adding 1 to x
+    continuing...
+    x is currently:  5
+     x is still less than 10, adding 1 to x
+    continuing...
+    x is currently:  6
+     x is still less than 10, adding 1 to x
+    continuing...
+    x is currently:  7
+     x is still less than 10, adding 1 to x
+    continuing...
+    x is currently:  8
+     x is still less than 10, adding 1 to x
+    continuing...
+    x is currently:  9
+     x is still less than 10, adding 1 to x
+    continuing...
+
+Note how we have a printed statement when x==3, and a continue being printed out as we continue through the outer while loop. Let's put in a break once x ==3 and see if the result makes sense:
+
+```python
+x = 0
+
+while x < 10:
+    print('x is currently: ',x)
+    print(' x is still less than 10, adding 1 to x')
+    x+=1
+    if x==3:
+        print('Breaking because x==3')
+        break
+    else:
+        print('continuing...')
+        continue
+```
+
+    x is currently:  0
+     x is still less than 10, adding 1 to x
+    continuing...
+    x is currently:  1
+     x is still less than 10, adding 1 to x
+    continuing...
+    x is currently:  2
+     x is still less than 10, adding 1 to x
+    Breaking because x==3
+
+Note how the other <code>else</code> statement wasn't reached and continuing was never printed!
+
+After these brief but simple examples, you should feel comfortable using <code>while</code> statements in your code.
+
+**A word of caution however! It is possible to create an infinitely running loop with <code>while</code> statements. For example:**
+
+```python
+# DO NOT RUN THIS CODE!!!!
+while True:
+    print("I'm stuck in an infinite loop!")
+```
+
+A quick note: If you _did_ run the above cell, click on the Kernel menu above to restart the kernel!
+
+# Useful Operators
+
+There are a few built-in functions and "operators" in Python that don't fit well into any category, so we will go over them in this lecture, let's begin!
+
+## range
+
+The range function allows you to quickly _generate_ a list of integers, this comes in handy a lot, so take note of how to use it! There are 3 parameters you can pass, a start, a stop, and a step size. Let's see some examples:
+
+```python
+range(0,11)
+```
+
+    range(0, 11)
+
+Note that this is a **generator** function, so to actually get a list out of it, we need to cast it to a list with **list()**. What is a generator? Its a special type of function that will generate information and not need to save it to memory. We haven't talked about functions or generators yet, so just keep this in your notes for now, we will discuss this in much more detail in later on in your training!
+
+```python
+# Notice how 11 is not included, up to but not including 11, just like slice notation!
+list(range(0,11))
+```
+
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+```python
+list(range(0,12))
+```
+
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+```python
+# Third parameter is step size!
+# step size just means how big of a jump/leap/step you
+# take from the starting number to get to the next number.
+
+list(range(0,11,2))
+```
+
+    [0, 2, 4, 6, 8, 10]
+
+```python
+list(range(0,101,10))
+```
+
+    [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+## enumerate
+
+enumerate is a very useful function to use with for loops. Let's imagine the following situation:
+
+```python
+index_count = 0
+
+for letter in 'abcde':
+    print("At index {} the letter is {}".format(index_count,letter))
+    index_count += 1
+```
+
+    At index 0 the letter is a
+    At index 1 the letter is b
+    At index 2 the letter is c
+    At index 3 the letter is d
+    At index 4 the letter is e
+
+Keeping track of how many loops you've gone through is so common, that enumerate was created so you don't need to worry about creating and updating this index_count or loop_count variable
+
+```python
+# Notice the tuple unpacking!
+
+for i,letter in enumerate('abcde'):
+    print("At index {} the letter is {}".format(i,letter))
+```
+
+    At index 0 the letter is a
+    At index 1 the letter is b
+    At index 2 the letter is c
+    At index 3 the letter is d
+    At index 4 the letter is e
+
+## zip
+
+Notice the format enumerate actually returns, let's take a look by transforming it to a list()
+
+```python
+list(enumerate('abcde'))
+```
+
+    [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd'), (4, 'e')]
+
+It was a list of tuples, meaning we could use tuple unpacking during our for loop. This data structure is actually very common in Python , especially when working with outside libraries. You can use the **zip()** function to quickly create a list of tuples by "zipping" up together two lists.
+
+```python
+mylist1 = [1,2,3,4,5]
+mylist2 = ['a','b','c','d','e']
+```
+
+```python
+# This one is also a generator! We will explain this later, but for now let's transform it to a list
+zip(mylist1,mylist2)
+```
+
+    <zip at 0x1d205086f08>
+
+```python
+list(zip(mylist1,mylist2))
+```
+
+    [(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e')]
+
+To use the generator, we could just use a for loop
+
+```python
+for item1, item2 in zip(mylist1,mylist2):
+    print('For this tuple, first item was {} and second item was {}'.format(item1,item2))
+```
+
+    For this tuple, first item was 1 and second item was a
+    For this tuple, first item was 2 and second item was b
+    For this tuple, first item was 3 and second item was c
+    For this tuple, first item was 4 and second item was d
+    For this tuple, first item was 5 and second item was e
+
+## in operator
+
+We've already seen the **in** keyword during the for loop, but we can also use it to quickly check if an object is in a list
+
+```python
+'x' in ['x','y','z']
+```
+
+    True
+
+```python
+'x' in [1,2,3]
+```
+
+    False
+
+## not in
+
+We can combine **in** with a **not** operator, to check if some object or variable is not present in a list.
+
+```python
+'x' not in ['x','y','z']
+```
+
+    False
+
+```python
+'x' not in [1,2,3]
+```
+
+    True
+
+## min and max
+
+Quickly check the minimum or maximum of a list with these functions.
+
+```python
+mylist = [10,20,30,40,100]
+```
+
+```python
+min(mylist)
+```
+
+    10
+
+```python
+max(mylist)
+```
+
+    100
+
+## random
+
+Python comes with a built in random library. There are a lot of functions included in this random library, so we will only show you two useful functions for now.
+
+```python
+from random import shuffle
+```
+
+```python
+# This shuffles the list "in-place" meaning it won't return
+# anything, instead it will effect the list passed
+shuffle(mylist)
+```
+
+```python
+mylist
+```
+
+    [40, 10, 100, 30, 20]
+
+```python
+from random import randint
+```
+
+```python
+# Return random integer in range [a, b], including both end points.
+randint(0,100)
+```
+
+    25
+
+```python
+# Return random integer in range [a, b], including both end points.
+randint(0,100)
+```
+
+    91
+
+## input
+
+```python
+input('Enter Something into this box: ')
+```
+
+    Enter Something into this box: great job!
+
+
+
+
+
+    'great job!'
+
+# List Comprehensions
+
+In addition to sequence operations and list methods, Python includes a more advanced operation called a list comprehension.
+
+List comprehensions allow us to build out lists using a different notation. You can think of it as essentially a one line <code>for</code> loop built inside of brackets. For a simple example:
+
+## Example 1
+
+```python
+# Grab every letter in string
+lst = [x for x in 'word']
+```
+
+```python
+# Check
+lst
+```
+
+    ['w', 'o', 'r', 'd']
+
+This is the basic idea of a list comprehension. If you're familiar with mathematical notation this format should feel familiar for example: x^2 : x in { 0,1,2...10 }
+
+Let's see a few more examples of list comprehensions in Python:
+
+## Example 2
+
+```python
+# Square numbers in range and turn into list
+lst = [x**2 for x in range(0,11)]
+```
+
+```python
+lst
+```
+
+    [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+## Example 3
+
+Let's see how to add in <code>if</code> statements:
+
+```python
+# Check for even numbers in a range
+lst = [x for x in range(11) if x % 2 == 0]
+```
+
+```python
+lst
+```
+
+    [0, 2, 4, 6, 8, 10]
+
+## Example 4
+
+Can also do more complicated arithmetic:
+
+```python
+# Convert Celsius to Fahrenheit
+celsius = [0,10,20.1,34.5]
+
+fahrenheit = [((9/5)*temp + 32) for temp in celsius ]
+
+fahrenheit
+```
+
+    [32.0, 50.0, 68.18, 94.1]
+
+## Example 5
+
+We can also perform nested list comprehensions, for example:
+
+```python
+lst = [ x**2 for x in [x**2 for x in range(11)]]
+lst
+```
+
+    [0, 1, 16, 81, 256, 625, 1296, 2401, 4096, 6561, 10000]
+
+Later on in the course we will learn about generator comprehensions. After this lecture you should feel comfortable reading and writing basic list comprehensions.
+
+# Statements Assessment Solutions
+
+---
+
+**Use <code>for</code>, .split(), and <code>if</code> to create a Statement that will print out words that start with 's':**
+
+```python
+st = 'Print only the words that start with s in this sentence'
+```
+
+```python
+for word in st.split():
+    if word[0] == 's':
+        print(word)
+```
+
+    start
+    s
+    sentence
+
+---
+
+**Use range() to print all the even numbers from 0 to 10.**
+
+```python
+list(range(0,11,2))
+```
+
+    [0, 2, 4, 6, 8, 10]
+
+---
+
+**Use List comprehension to create a list of all numbers between 1 and 50 that are divisible by 3.**
+
+```python
+[x for x in range(1,51) if x%3 == 0]
+```
+
+    [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48]
+
+---
+
+**Go through the string below and if the length of a word is even print "even!"**
+
+```python
+st = 'Print every word in this sentence that has an even number of letters'
+```
+
+```python
+for word in st.split():
+    if len(word)%2 == 0:
+        print(word+" <-- has an even length!")
+```
+
+    word <-- has an even length!
+    in <-- has an even length!
+    this <-- has an even length!
+    sentence <-- has an even length!
+    that <-- has an even length!
+    an <-- has an even length!
+    even <-- has an even length!
+    number <-- has an even length!
+    of <-- has an even length!
+
+---
+
+**Write a program that prints the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number, and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".**
+
+```python
+for num in range(1,101):
+    if num % 3 == 0 and num % 5 == 0:
+        print("FizzBuzz")
+    elif num % 3 == 0:
+        print("Fizz")
+    elif num % 5 == 0:
+        print("Buzz")
+    else:
+        print(num)
+```
+
+---
+
+**Use a List Comprehension to create a list of the first letters of every word in the string below:**
+
+```python
+st = 'Create a list of the first letters of every word in this string'
+```
+
+```python
+[word[0] for word in st.split()]
+```
+
+    ['C', 'a', 'l', 'o', 't', 'f', 'l', 'o', 'e', 'w', 'i', 't', 's']
+
+### Great Job!
+
+# Guessing Game Challenge - Solution
+
+Let's use `while` loops to create a guessing game.
+
+The Challenge:
+
+Write a program that picks a random integer from 1 to 100, and has players guess the number. The rules are:
+
+1. If a player's guess is less than 1 or greater than 100, say "OUT OF BOUNDS"
+2. On a player's first turn, if their guess is
+
+- within 10 of the number, return "WARM!"
+- further than 10 away from the number, return "COLD!"
+
+3. On all subsequent turns, if a guess is
+
+- closer to the number than the previous guess return "WARMER!"
+- farther from the number than the previous guess, return "COLDER!"
+
+4. When the player's guess equals the number, tell them they've guessed correctly _and_ how many guesses it took!
+
+#### First, pick a random integer from 1 to 100 using the random module and assign it to a variable
+
+Note: `random.randint(a,b)` returns a random integer in range `[a, b]`, including both end points.
+
+```python
+import random
+
+num = random.randint(1,100)
+```
+
+#### Next, print an introduction to the game and explain the rules
+
+```python
+print("WELCOME TO GUESS ME!")
+print("I'm thinking of a number between 1 and 100")
+print("If your guess is more than 10 away from my number, I'll tell you you're COLD")
+print("If your guess is within 10 of my number, I'll tell you you're WARM")
+print("If your guess is farther than your most recent guess, I'll say you're getting COLDER")
+print("If your guess is closer than your most recent guess, I'll say you're getting WARMER")
+print("LET'S PLAY!")
+```
+
+    WELCOME TO GUESS ME!
+    I'm thinking of a number between 1 and 100
+    If your guess is more than 10 away from my number, I'll tell you you're COLD
+    If your guess is within 10 of my number, I'll tell you you're WARM
+    If your guess is farther than your most recent guess, I'll say you're getting COLDER
+    If your guess is closer than your most recent guess, I'll say you're getting WARMER
+    LET'S PLAY!
+
+#### Create a list to store guesses
+
+Hint: zero is a good placeholder value. It's useful because it evaluates to "False"
+
+```python
+guesses = [0]
+```
+
+#### Write a `while` loop that asks for a valid guess. Test it a few times to make sure it works.
+
+```python
+while True:
+
+    guess = int(input("I'm thinking of a number between 1 and 100.\n  What is your guess? "))
+
+    if guess < 1 or guess > 100:
+        print('OUT OF BOUNDS! Please try again: ')
+        continue
+
+    break
+```
+
+    I'm thinking of a number between 1 and 100.
+      What is your guess? 500
+    OUT OF BOUNDS! Please try again:
+    I'm thinking of a number between 1 and 100.
+      What is your guess? 50
+
+#### Write a `while` loop that compares the player's guess to our number. If the player guesses correctly, break from the loop. Otherwise, tell the player if they're warmer or colder, and continue asking for guesses.
+
+Some hints:
+
+- it may help to sketch out all possible combinations on paper first!
+- you can use the `abs()` function to find the positive difference between two numbers
+- if you append all new guesses to the list, then the previous guess is given as `guesses[-2]`
+
+```python
+while True:
+
+    # we can copy the code from above to take an input
+    guess = int(input("I'm thinking of a number between 1 and 100.\n  What is your guess? "))
+
+    if guess < 1 or guess > 100:
+        print('OUT OF BOUNDS! Please try again: ')
+        continue
+
+    # here we compare the player's guess to our number
+    if guess == num:
+        print(f'CONGRATULATIONS, YOU GUESSED IT IN ONLY {len(guesses)} GUESSES!!')
+        break
+
+    # if guess is incorrect, add guess to the list
+    guesses.append(guess)
+
+    # when testing the first guess, guesses[-2]==0, which evaluates to False
+    # and brings us down to the second section
+
+    if guesses[-2]:
+        if abs(num-guess) < abs(num-guesses[-2]):
+            print('WARMER!')
+        else:
+            print('COLDER!')
+
+    else:
+        if abs(num-guess) <= 10:
+            print('WARM!')
+        else:
+            print('COLD!')
+```
+
+    I'm thinking of a number between 1 and 100.
+      What is your guess? 50
+    COLD!
+    I'm thinking of a number between 1 and 100.
+      What is your guess? 75
+    WARMER!
+    I'm thinking of a number between 1 and 100.
+      What is your guess? 85
+    WARMER!
+    I'm thinking of a number between 1 and 100.
+      What is your guess? 92
+    COLDER!
+    I'm thinking of a number between 1 and 100.
+      What is your guess? 80
+    WARMER!
+    I'm thinking of a number between 1 and 100.
+      What is your guess? 78
+    COLDER!
+    I'm thinking of a number between 1 and 100.
+      What is your guess? 82
+    WARMER!
+    I'm thinking of a number between 1 and 100.
+      What is your guess? 83
+    COLDER!
+    I'm thinking of a number between 1 and 100.
+      What is your guess? 81
+    CONGRATULATIONS, YOU GUESSED IT IN ONLY 9 GUESSES!!
+
+That's it! You've just programmed your first game!
+
+In the next section we'll learn how to turn some of these repetitive actions into _functions_ that can be called whenever we need them.
+
+### Good Job!
+
+# Methods
+
+We've already seen a few example of methods when learning about Object and Data Structure Types in Python. Methods are essentially functions built into objects. Later on in the course we will learn about how to create our own objects and methods using Object Oriented Programming (OOP) and classes.
+
+Methods perform specific actions on an object and can also take arguments, just like a function. This lecture will serve as just a brief introduction to methods and get you thinking about overall design methods that we will touch back upon when we reach OOP in the course.
+
+Methods are in the form:
+
+    object.method(arg1,arg2,etc...)
+
+You'll later see that we can think of methods as having an argument 'self' referring to the object itself. You can't see this argument but we will be using it later on in the course during the OOP lectures.
+
+Let's take a quick look at what an example of the various methods a list has:
+
+```python
+# Create a simple list
+lst = [1,2,3,4,5]
+```
+
+Fortunately, with iPython and the Jupyter Notebook we can quickly see all the possible methods using the tab key. The methods for a list are:
+
+- append
+- count
+- extend
+- insert
+- pop
+- remove
+- reverse
+- sort
+
+Let's try out a few of them:
+
+append() allows us to add elements to the end of a list:
+
+```python
+lst.append(6)
+```
+
+```python
+lst
+```
+
+    [1, 2, 3, 4, 5, 6]
+
+Great! Now how about count()? The count() method will count the number of occurrences of an element in a list.
+
+```python
+# Check how many times 2 shows up in the list
+lst.count(2)
+```
+
+    1
+
+You can always use Shift+Tab in the Jupyter Notebook to get more help about the method. In general Python you can use the help() function:
+
+```python
+help(lst.count)
+```
+
+    Help on built-in function count:
+
+    count(...) method of builtins.list instance
+        L.count(value) -> integer -- return number of occurrences of value
+
+Feel free to play around with the rest of the methods for a list. Later on in this section your quiz will involve using help and Google searching for methods of different types of objects!
+
+Great! By this lecture you should feel comfortable calling methods of objects in Python!
+
+---
+
+# Functions
+
+## Introduction to Functions
+
+This lecture will consist of explaining what a function is in Python and how to create one. Functions will be one of our main building blocks when we construct larger and larger amounts of code to solve problems.
+
+### What is a function?
+
+Formally, a function is a useful device that groups together a set of statements so they can be run more than once. They can also let us specify parameters that can serve as inputs to the functions.
+
+On a more fundamental level, functions allow us to not have to repeatedly write the same code again and again. If you remember back to the lessons on strings and lists, remember that we used a function len() to get the length of a string. Since checking the length of a sequence is a common task you would want to write a function that can do this repeatedly at command.
+
+Functions will be one of most basic levels of reusing code in Python, and it will also allow us to start thinking of program design (we will dive much deeper into the ideas of design when we learn about Object Oriented Programming).
+
+### Why even use functions?
+
+Put simply, you should use functions when you plan on using a block of code multiple times. The function will allow you to call the same block of code without having to write it multiple times. This in turn will allow you to create more complex Python scripts. To really understand this though, we should actually write our own functions!
+
+## Function Topics
+
+- def keyword
+- simple example of a function
+- calling a function with ()
+- accepting parameters
+- print versus return
+- adding in logic inside a function
+- multiple returns inside a function
+- adding in loops inside a function
+- tuple unpacking
+- interactions between functions
+
+### def keyword
+
+Let's see how to build out a function's syntax in Python. It has the following form:
+
+```python
+def name_of_function(arg1,arg2):
+    '''
+    This is where the function's Document String (docstring) goes.
+    When you call help() on your function it will be printed out.
+    '''
+    # Do stuff here
+    # Return desired result
+```
+
+We begin with <code>def</code> then a space followed by the name of the function. Try to keep names relevant, for example len() is a good name for a length() function. Also be careful with names, you wouldn't want to call a function the same name as a [built-in function in Python](https://docs.python.org/3/library/functions.html) (such as len).
+
+Next come a pair of parentheses with a number of arguments separated by a comma. These arguments are the inputs for your function. You'll be able to use these inputs in your function and reference them. After this you put a colon.
+
+Now here is the important step, you must indent to begin the code inside your function correctly. Python makes use of _whitespace_ to organize code. Lots of other programing languages do not do this, so keep that in mind.
+
+Next you'll see the docstring, this is where you write a basic description of the function. Using Jupyter and Jupyter Notebooks, you'll be able to read these docstrings by pressing Shift+Tab after a function name. Docstrings are not necessary for simple functions, but it's good practice to put them in so you or other people can easily understand the code you write.
+
+After all this you begin writing the code you wish to execute.
+
+The best way to learn functions is by going through examples. So let's try to go through examples that relate back to the various objects and data structures we learned about before.
+
+### Simple example of a function
+
+```python
+def say_hello():
+    print('hello')
+```
+
+### Calling a function with ()
+
+Call the function:
+
+```python
+say_hello()
+```
+
+    hello
+
+If you forget the parenthesis (), it will simply display the fact that say_hello is a function. Later on we will learn we can actually pass in functions into other functions! But for now, simply remember to call functions with ().
+
+```python
+say_hello
+```
+
+    <function __main__.say_hello>
+
+### Accepting parameters (arguments)
+
+Let's write a function that greets people with their name.
+
+```python
+def greeting(name):
+    print(f'Hello {name}')
+```
+
+```python
+greeting('Jose')
+```
+
+    Hello Jose
+
+## Using return
+
+So far we've only seen print() used, but if we actually want to save the resulting variable we need to use the **return** keyword.
+
+Let's see some example that use a <code>return</code> statement. <code>return</code> allows a function to _return_ a result that can then be stored as a variable, or used in whatever manner a user wants.
+
+### Example: Addition function
+
+```python
+def add_num(num1,num2):
+    return num1+num2
+```
+
+```python
+add_num(4,5)
+```
+
+    9
+
+```python
+# Can also save as variable due to return
+result = add_num(4,5)
+```
+
+```python
+print(result)
+```
+
+    9
+
+What happens if we input two strings?
+
+```python
+add_num('one','two')
+```
+
+    'onetwo'
+
+## Very Common Question: "What is the difference between _return_ and _print_?"
+
+**The return keyword allows you to actually save the result of the output of a function as a variable. The print() function simply displays the output to you, but doesn't save it for future use. Let's explore this in more detail**
+
+```python
+def print_result(a,b):
+    print(a+b)
+```
+
+```python
+def return_result(a,b):
+    return a+b
+```
+
+```python
+print_result(10,5)
+```
+
+    15
+
+```python
+# You won't see any output if you run this in a .py script
+return_result(10,5)
+```
+
+    15
+
+**But what happens if we actually want to save this result for later use?**
+
+```python
+my_result = print_result(20,20)
+```
+
+    40
+
+```python
+my_result
+```
+
+```python
+type(my_result)
+```
+
+    NoneType
+
+**Be careful! Notice how print_result() doesn't let you actually save the result to a variable! It only prints it out, with print() returning None for the assignment!**
+
+```python
+my_result = return_result(20,20)
+```
+
+```python
+my_result
+```
+
+    40
+
+```python
+my_result + my_result
+```
+
+    80
+
+# Adding Logic to Internal Function Operations
+
+So far we know quite a bit about constructing logical statements with Python, such as if/else/elif statements, for and while loops, checking if an item is **in** a list or **not in** a list (Useful Operators Lecture). Let's now see how we can perform these operations within a function.
+
+### Check if a number is even
+
+**Recall the mod operator % which returns the remainder after division, if a number is even then mod 2 (% 2) should be == to zero.**
+
+```python
+2 % 2
+```
+
+    0
+
+```python
+20 % 2
+```
+
+    0
+
+```python
+21 % 2
+```
+
+    1
+
+```python
+20 % 2 == 0
+```
+
+    True
+
+```python
+21 % 2 == 0
+```
+
+    False
+
+** Let's use this to construct a function. Notice how we simply return the boolean check.**
+
+```python
+def even_check(number):
+    return number % 2 == 0
+```
+
+```python
+even_check(20)
+```
+
+    True
+
+```python
+even_check(21)
+```
+
+    False
+
+### Check if any number in a list is even
+
+Let's return a boolean indicating if **any** number in a list is even. Notice here how **return** breaks out of the loop and exits the function
+
+```python
+def check_even_list(num_list):
+    # Go through each number
+    for number in num_list:
+        # Once we get a "hit" on an even number, we return True
+        if number % 2 == 0:
+            return True
+        # Otherwise we don't do anything
+        else:
+            pass
+```
+
+** Is this enough? NO! We're not returning anything if they are all odds!**
+
+```python
+check_even_list([1,2,3])
+```
+
+    True
+
+```python
+check_even_list([1,1,1])
+```
+
+** VERY COMMON MISTAKE!! LET'S SEE A COMMON LOGIC ERROR, NOTE THIS IS WRONG!!!**
+
+```python
+def check_even_list(num_list):
+    # Go through each number
+    for number in num_list:
+        # Once we get a "hit" on an even number, we return True
+        if number % 2 == 0:
+            return True
+        # This is WRONG! This returns False at the very first odd number!
+        # It doesn't end up checking the other numbers in the list!
+        else:
+            return False
+```
+
+```python
+# UH OH! It is returning False after hitting the first 1
+check_even_list([1,2,3])
+```
+
+    False
+
+** Correct Approach: We need to initiate a return False AFTER running through the entire loop**
+
+```python
+def check_even_list(num_list):
+    # Go through each number
+    for number in num_list:
+        # Once we get a "hit" on an even number, we return True
+        if number % 2 == 0:
+            return True
+        # Don't do anything if its not even
+        else:
+            pass
+    # Notice the indentation! This ensures we run through the entire for loop
+    return False
+```
+
+```python
+check_even_list([1,2,3])
+```
+
+    True
+
+```python
+check_even_list([1,3,5])
+```
+
+    False
+
+### Return all even numbers in a list
+
+Let's add more complexity, we now will return all the even numbers in a list, otherwise return an empty list.
+
+```python
+def check_even_list(num_list):
+
+    even_numbers = []
+
+    # Go through each number
+    for number in num_list:
+        # Once we get a "hit" on an even number, we append the even number
+        if number % 2 == 0:
+            even_numbers.append(number)
+        # Don't do anything if its not even
+        else:
+            pass
+    # Notice the indentation! This ensures we run through the entire for loop
+    return even_numbers
+```
+
+```python
+check_even_list([1,2,3,4,5,6])
+```
+
+    [2, 4, 6]
+
+```python
+check_even_list([1,3,5])
+```
+
+    []
+
+## Returning Tuples for Unpacking
+
+** Recall we can loop through a list of tuples and "unpack" the values within them**
+
+```python
+stock_prices = [('AAPL',200),('GOOG',300),('MSFT',400)]
+```
+
+```python
+for item in stock_prices:
+    print(item)
+```
+
+    ('AAPL', 200)
+    ('GOOG', 300)
+    ('MSFT', 400)
+
+```python
+for stock,price in stock_prices:
+    print(stock)
+```
+
+    AAPL
+    GOOG
+    MSFT
+
+```python
+for stock,price in stock_prices:
+    print(price)
+```
+
+    200
+    300
+    400
+
+**Similarly, functions often return tuples, to easily return multiple results for later use.**
+
+Let's imagine the following list:
+
+```python
+work_hours = [('Abby',100),('Billy',400),('Cassie',800)]
+```
+
+The employee of the month function will return both the name and number of hours worked for the top performer (judged by number of hours worked).
+
+```python
+def employee_check(work_hours):
+
+    # Set some max value to intially beat, like zero hours
+    current_max = 0
+    # Set some empty value before the loop
+    employee_of_month = ''
+
+    for employee,hours in work_hours:
+        if hours > current_max:
+            current_max = hours
+            employee_of_month = employee
+        else:
+            pass
+
+    # Notice the indentation here
+    return (employee_of_month,current_max)
+```
+
+```python
+employee_check(work_hours)
+```
+
+    ('Cassie', 800)
+
+## Interactions between functions
+
+Functions often use results from other functions, let's see a simple example through a guessing game. There will be 3 positions in the list, one of which is an 'O', a function will shuffle the list, another will take a player's guess, and finally another will check to see if it is correct. This is based on the classic carnival game of guessing which cup a red ball is under.
+
+**How to shuffle a list in Python**
+
+```python
+example = [1,2,3,4,5]
+```
+
+```python
+from random import shuffle
+```
+
+```python
+# Note shuffle is in-place
+shuffle(example)
+```
+
+```python
+example
+```
+
+    [3, 1, 4, 5, 2]
+
+**OK, let's create our simple game**
+
+```python
+mylist = [' ','O',' ']
+```
+
+```python
+def shuffle_list(mylist):
+    # Take in list, and returned shuffle versioned
+    shuffle(mylist)
+
+    return mylist
+```
+
+```python
+mylist
+```
+
+    [' ', 'O', ' ']
+
+```python
+shuffle_list(mylist)
+```
+
+    [' ', ' ', 'O']
+
+```python
+def player_guess():
+
+    guess = ''
+
+    while guess not in ['0','1','2']:
+
+        # Recall input() returns a string
+        guess = input("Pick a number: 0, 1, or 2:  ")
+
+    return int(guess)
+```
+
+```python
+player_guess()
+```
+
+    Pick a number: 0, 1, or 2:  1
+
+
+
+
+
+    1
+
+Now we will check the user's guess. Notice we only print here, since we have no need to save a user's guess or the shuffled list.
+
+```python
+def check_guess(mylist,guess):
+    if mylist[guess] == 'O':
+        print('Correct Guess!')
+    else:
+        print('Wrong! Better luck next time')
+        print(mylist)
+```
+
+Now we create a little setup logic to run all the functions. Notice how they interact with each other!
+
+```python
+# Initial List
+mylist = [' ','O',' ']
+
+# Shuffle It
+mixedup_list = shuffle_list(mylist)
+
+# Get User's Guess
+guess = player_guess()
+
+# Check User's Guess
+#------------------------
+# Notice how this function takes in the input
+# based on the output of other functions!
+check_guess(mixedup_list,guess)
+```
+
+    Pick a number: 0, 1, or 2:  1
+    Wrong! Better luck next time
+    [' ', ' ', 'O']
+
+Great! You should now have a basic understanding of creating your own functions to save yourself from repeatedly writing code!
