@@ -278,10 +278,10 @@ To create a string in Python you need to use either single quotes or double quot
 **Output:**
 
 ```text
-    File "<ipython-input-4-da9a34b3dc31>", line 2
-        ' I'm using single quotes, but this will create an error'
-            ^
-    SyntaxError: invalid syntax
+line 2
+    ' I'm using single quotes, but this will create an error'
+        ^
+SyntaxError: invalid syntax
 ```
 
 The reason for the error above is because the single quote in <code>I'm</code> stopped the string. You can use combinations of double and single quotes to get the complete statement.
@@ -314,13 +314,13 @@ print('See what I mean?')
 **Output:**
 
 ```text
-    Hello World 1
-    Hello World 2
-    Use
-     to print a new line
+Hello World 1
+Hello World 2
+Use
+ to print a new line
 
 
-    See what I mean?
+See what I mean?
 ```
 
 ## String Basics
@@ -433,9 +433,9 @@ s[0] = 'x'
 **Output:**
 
 ```text
-    ----> 2 s[0] = 'x'
+----> 2 s[0] = 'x'
 
-    TypeError: 'str' object does not support item assignment
+TypeError: 'str' object does not support item assignment
 ```
 
 Notice how the error tells us directly what we can't do, change the item assignment!
@@ -514,8 +514,6 @@ The easiest way to show this is through an example:
 'Insert another string with curly brackets: {}'.format('The inserted string')
 # 'Insert another string with curly brackets: The inserted string'
 ```
-
-We will revisit this string formatting topic in later sections when we are building our projects!
 
 ---
 
@@ -681,9 +679,9 @@ print('{0:8} | {1:9}'.format('Oranges', 10))
 **Output:**
 
 ```text
-    Fruit    | Quantity
-    Apples   |       3.0
-    Oranges  |        10
+Fruit    | Quantity
+Apples   |       3.0
+Oranges  |        10
 ```
 
 By default, `.format()` aligns text to the left, numbers to the right. You can pass an optional `<`,`^`, or `>` to set a left, center or right alignment:
@@ -696,8 +694,8 @@ print('{0:<8} | {1:^8} | {2:>8}'.format(11,22,33))
 **Output:**
 
 ```text
-    Left     |  Center  |    Right
-    11       |    22    |       33
+Left     |  Center  |    Right
+11       |    22    |       33
 ```
 
 You can precede the aligment operator with a padding character
@@ -710,8 +708,8 @@ print('{0:=<8} | {1:-^8} | {2:.>8}'.format(11,22,33))
 **Output:**
 
 ```text
-    Left==== | -Center- | ...Right
-    11====== | ---22--- | ......33
+Left==== | -Center- | ...Right
+11====== | ---22--- | ......33
 ```
 
 Field widths and float precision are handled in a way similar to placeholders. The following two print statements are equivalent:
@@ -953,15 +951,14 @@ list1[100]
 **Output:**
 
 ```text
-    ---------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
-    IndexError                                Traceback (most recent call last)
+IndexError                            Traceback (most recent call last)
 
-    <ipython-input-22-af6d2015fa1f> in <module>()
-    ----> 1 list1[100]
+----> 1 list1[100]
 
 
-    IndexError: list index out of range
+IndexError: list index out of range
 ```
 
 We can use the **sort** method and the **reverse** methods to also effect your lists:
@@ -1031,8 +1028,6 @@ first_col = [row[0] for row in matrix]
 # [1, 4, 7]
 ```
 
-We used a list comprehension here to grab the first element of every row in the matrix object. We will cover this in much more detail later on!
-
 ---
 
 ---
@@ -1059,9 +1054,8 @@ my_dict = {'key1':'value1','key2':'value2'}
 ```python
 # Call values by their key
 my_dict['key2']
+# 'value2'
 ```
-
-    'value2'
 
 Its important to note that dictionaries are very flexible in the data types they can hold. For example:
 
@@ -1072,31 +1066,27 @@ my_dict = {'key1':123,'key2':[12,23,33],'key3':['item0','item1','item2']}
 ```python
 # Let's call items from the dictionary
 my_dict['key3']
+# ['item0', 'item1', 'item2']
 ```
-
-    ['item0', 'item1', 'item2']
 
 ```python
 # Can call an index on that value
 my_dict['key3'][0]
+# 'item0'
 ```
-
-    'item0'
 
 ```python
 # Can then even call methods on that value
 my_dict['key3'][0].upper()
+# 'ITEM0'
 ```
-
-    'ITEM0'
 
 We can affect the values of a key as well. For instance:
 
 ```python
 my_dict['key1']
+# 123
 ```
-
-    123
 
 ```python
 # Subtract 123 from the value
@@ -1106,9 +1096,8 @@ my_dict['key1'] = my_dict['key1'] - 123
 ```python
 #Check
 my_dict['key1']
+# 0
 ```
-
-    0
 
 A quick note, Python has a built-in method of doing a self subtraction or addition (or multiplication or division). We could have also used += or -= for the above statement. For example:
 
@@ -1116,9 +1105,8 @@ A quick note, Python has a built-in method of doing a self subtraction or additi
 # Set the object equal to itself minus 123
 my_dict['key1'] -= 123
 my_dict['key1']
+# -123
 ```
-
-    -123
 
 We can also create keys by assignment. For instance if we started off with an empty dictionary, we could continually add to it:
 
@@ -1140,9 +1128,8 @@ d['answer'] = 42
 ```python
 #Show
 d
+# {'animal': 'Dog', 'answer': 42}
 ```
-
-    {'animal': 'Dog', 'answer': 42}
 
 ## Nesting with Dictionaries
 
@@ -1158,9 +1145,8 @@ Wow! That's a quite the inception of dictionaries! Let's see how we can grab tha
 ```python
 # Keep calling the keys
 d['key1']['nestkey']['subnestkey']
+# 'value'
 ```
-
-    'value'
 
 ## A few Dictionary Methods
 
@@ -1174,25 +1160,20 @@ d = {'key1':1,'key2':2,'key3':3}
 ```python
 # Method to return a list of all keys
 d.keys()
+# dict_keys(['key1', 'key2', 'key3'])
 ```
-
-    dict_keys(['key1', 'key2', 'key3'])
 
 ```python
 # Method to grab all values
 d.values()
+# dict_values([1, 2, 3])
 ```
-
-    dict_values([1, 2, 3])
 
 ```python
 # Method to return tuples of all items  (we'll learn about tuples soon)
 d.items()
+# dict_items([('key1', 1), ('key2', 2), ('key3', 3)])
 ```
-
-    dict_items([('key1', 1), ('key2', 2), ('key3', 3)])
-
-Hopefully you now have a good basic understanding how to construct dictionaries. There's a lot more to go into here, but we will revisit dictionaries at later time. After this section all you need to know is how to create a dictionary and how to retrieve values from it.
 
 ---
 
@@ -1203,13 +1184,6 @@ Hopefully you now have a good basic understanding how to construct dictionaries.
 # Tuples
 
 In Python tuples are very similar to lists, however, unlike lists they are _immutable_ meaning they can not be changed. You would use tuples to present things that shouldn't be changed, such as days of the week, or dates on a calendar.
-
-In this section, we will get a brief overview of the following:
-
-    1.) Constructing Tuples
-    2.) Basic Tuple Methods
-    3.) Immutability
-    4.) When to Use Tuples
 
 You'll have an intuition of how to use tuples based on what you've learned about lists. We can treat them very similarly with the major distinction being that tuples are immutable.
 
@@ -1225,9 +1199,8 @@ t = (1,2,3)
 ```python
 # Check len just like a list
 len(t)
+# 3
 ```
-
-    3
 
 ```python
 # Can also mix object types
@@ -1235,23 +1208,20 @@ t = ('one',2)
 
 # Show
 t
+# ('one', 2)
 ```
-
-    ('one', 2)
 
 ```python
 # Use indexing just like we did in lists
 t[0]
+# 'one'
 ```
-
-    'one'
 
 ```python
 # Slicing just like a list
 t[-1]
+# 2
 ```
-
-    2
 
 ## Basic Tuple Methods
 
@@ -1260,16 +1230,14 @@ Tuples have built-in methods, but not as many as lists do. Let's look at two of 
 ```python
 # Use .index to enter a value and return the index
 t.index('one')
+# 0
 ```
-
-    0
 
 ```python
 # Use .count to count the number of times a value appears
 t.count('one')
+# 1
 ```
-
-    1
 
 ## Immutability
 
@@ -1279,10 +1247,13 @@ It can't be stressed enough that tuples are immutable. To drive that point home:
 t[0]= 'change'
 ```
 
-    ----> 1 t[0]= 'change'
+**Output:**
 
+```text
+----> 1 t[0]= 'change'
 
-    TypeError: 'tuple' object does not support item assignment
+TypeError: 'tuple' object does not support item assignment
+```
 
 Because of this immutability, tuples can't grow. Once a tuple is made we can not add to it.
 
@@ -1290,23 +1261,21 @@ Because of this immutability, tuples can't grow. Once a tuple is made we can not
 t.append('nope')
 ```
 
-    ---------------------------------------------------------------------------
+**Output:**
 
-    AttributeError                            Traceback (most recent call last)
+```text
+---------------------------------------------------------------------------
 
-    <ipython-input-9-b75f5b09ac19> in <module>()
-    ----> 1 t.append('nope')
+AttributeError                            Traceback (most recent call last)
 
+----> 1 t.append('nope')
 
-    AttributeError: 'tuple' object has no attribute 'append'
+AttributeError: 'tuple' object has no attribute 'append'
+```
 
 ## When to use Tuples
 
 You may be wondering, "Why bother using tuples when they have fewer available methods?" To be honest, tuples are not used as often as lists in programming, but are used when immutability is necessary. If in your program you are passing around an object and need to make sure it does not get changed, then a tuple becomes your solution. It provides a convenient source of data integrity.
-
-You should now be able to create and use tuples in your programming as well as have an understanding of their immutability.
-
-Up next Files!
 
 ---
 
@@ -1334,9 +1303,8 @@ x.add(1)
 ```python
 #Show
 x
+# {1}
 ```
-
-    {1}
 
 Note the curly brackets. This does not indicate a dictionary! Although you can draw analogies as a set being a dictionary with only keys.
 
@@ -1350,9 +1318,8 @@ x.add(2)
 ```python
 #Show
 x
+# {1, 2}
 ```
-
-    {1, 2}
 
 ```python
 # Try to add the same element
@@ -1362,9 +1329,8 @@ x.add(1)
 ```python
 #Show
 x
+# {1, 2}
 ```
-
-    {1, 2}
 
 Notice how it won't place another 1 there. That's because a set is only concerned with unique elements! We can cast a list with multiple repeat elements to a set to get the unique elements. For example:
 
@@ -1376,9 +1342,8 @@ list1 = [1,1,2,2,3,4,5,6,1,1]
 ```python
 # Cast as set to get unique values
 set(list1)
+# {1, 2, 3, 4, 5, 6}
 ```
-
-    {1, 2, 3, 4, 5, 6}
 
 ## Booleans
 
@@ -1392,18 +1357,16 @@ a = True
 ```python
 #Show
 a
+# True
 ```
-
-    True
 
 We can also use comparison operators to create booleans. We will go over all the comparison operators later on in the course.
 
 ```python
 # Output is boolean
 1 > 2
+# False
 ```
-
-    False
 
 We can use None as a placeholder for an object that we don't want to reassign yet:
 
@@ -1415,11 +1378,8 @@ b = None
 ```python
 # Show
 print(b)
+# None
 ```
-
-    None
-
-Thats it! You should now have a basic understanding of Python objects and data structure types. Next, go ahead and do the assessment test!
 
 ---
 
@@ -1433,20 +1393,17 @@ Python uses file objects to interact with external files on your computer. These
 
 Python has a built-in open function that allows us to open and play with basic file types. First we will need a file though. We're going to use some IPython magic to create a text file!
 
-## IPython Writing a File
+**Quickly create a simple `test.txt` file with vscode text editor.**
 
-#### This function is specific to jupyter notebooks! Alternatively, quickly create a simple .txt file with sublime text editor.
+**Create test.txt file**
 
-```python
-%%writefile test.txt
+```text
 Hello, this is a quick test file.
 ```
 
-    Overwriting test.txt
-
 ## Python Opening a file
 
-Let's being by opening the file test.txt that is located in the same directory as this notebook. For now we will work with files located in the same directory as the notebook or .py script you are using.
+Let's begin by opening the file test.txt that is located in the same directory as opened folder in vscode.
 
 It is very easy to get an error on this step:
 
@@ -1454,68 +1411,67 @@ It is very easy to get an error on this step:
 myfile = open('whoops.txt')
 ```
 
-    ---------------------------------------------------------------------------
+**Output:**
 
-    FileNotFoundError                         Traceback (most recent call last)
+```text
+---------------------------------------------------------------------------
 
-    <ipython-input-1-dafe28ee473f> in <module>()
-    ----> 1 myfile = open('whoops.txt')
+FileNotFoundError                         Traceback (most recent call last)
+
+----> 1 myfile = open('whoops.txt')
 
 
-    FileNotFoundError: [Errno 2] No such file or directory: 'whoops.txt'
-
-To avoid this error,make sure your .txt file is saved in the same location as your notebook, to check your notebook location, use **pwd**:
-
-```python
-pwd
+FileNotFoundError: [Errno 2] No such file or directory: 'whoops.txt'
 ```
 
-    'C:\\Users\\Marcial\\Pierian-Data-Courses\\Complete-Python-3-Bootcamp\\00-Python Object and Data Structure Basics'
+To avoid this error,make sure your .txt file is saved in the same location, to check your location, use **pwd** or **echo %cd%**:
 
-**Alternatively, to grab files from any location on your computer, simply pass in the entire file path. **
+```bash
+pwd
+
+# 'C:\\Users\\b2r\\Python\\Object'
+```
+
+Alternatively, to grab files from any location on your computer, simply pass in the entire file path.
 
 For Windows you need to use double \ so python doesn't treat the second \ as an escape character, a file path is in the form:
 
-    myfile = open("C:\\Users\\YourUserName\\Home\\Folder\\myfile.txt")
+```py
+myfile = open("C:\\Users\\YourUserName\\Home\\Folder\\myfile.txt")
+```
 
 For MacOS and Linux you use slashes in the opposite direction:
 
-    myfile = open("/Users/YouUserName/Folder/myfile.txt")
+```py
+myfile = open("/Users/YouUserName/Folder/myfile.txt")
+```
 
 ```python
-# Open the text.txt we made earlier
+# Open the test.txt we made earlier
 my_file = open('test.txt')
 ```
 
 ```python
 # We can now read the file
 my_file.read()
+# 'Hello, this is a quick test file.'
 ```
-
-    'Hello, this is a quick test file.'
 
 ```python
 # But what happens if we try to read it again?
 my_file.read()
+# ''
 ```
-
-    ''
 
 This happens because you can imagine the reading "cursor" is at the end of the file after having read it. So there is nothing left to read. We can reset the "cursor" like this:
 
 ```python
 # Seek to the start of file (index 0)
 my_file.seek(0)
-```
-
-    0
-
-```python
 # Now read again
 my_file.read()
+# 'Hello, this is a quick test file.'
 ```
-
-    'Hello, this is a quick test file.'
 
 You can read a file line by line using the readlines method. Use caution with large files, since everything will be held in memory. We will learn how to iterate over large files later in the course.
 
@@ -1523,9 +1479,8 @@ You can read a file line by line using the readlines method. Use caution with la
 # Readlines returns a list of the lines in the file
 my_file.seek(0)
 my_file.readlines()
+# ['Hello, this is a quick test file.']
 ```
-
-    ['Hello, this is a quick test file.']
 
 When you have finished using a file, it is always good practice to close it.
 
@@ -1551,17 +1506,15 @@ Opening a file with `'w'` or `'w+'` truncates the original, meaning that anythin
 ```python
 # Write to the file
 my_file.write('This is a new line')
+# 18
 ```
-
-    18
 
 ```python
 # Read the file
 my_file.seek(0)
 my_file.read()
+# 'This is a new line'
 ```
-
-    'This is a new line'
 
 ```python
 my_file.close()  # always do this when you're done with a file
@@ -1575,49 +1528,29 @@ Passing the argument `'a'` opens the file and puts the pointer at the end, so an
 my_file = open('test.txt','a+')
 my_file.write('\nThis is text being appended to test.txt')
 my_file.write('\nAnd another line here.')
+# 23
 ```
-
-    23
 
 ```python
 my_file.seek(0)
 print(my_file.read())
 ```
 
-    This is a new line
-    This is text being appended to test.txt
-    And another line here.
+**Output:**
+
+```text
+This is a new line
+This is text being appended to test.txt
+And another line here.
+```
 
 ```python
 my_file.close()
 ```
 
-### Appending with `%%writefile`
-
-We can do the same thing using IPython cell magic:
-
-```python
-%%writefile -a test.txt
-
-This is text being appended to test.txt
-And another line here.
-```
-
-    Appending to test.txt
-
-Add a blank space if you want the first line to begin on its own line, as Jupyter won't recognize escape sequences like `\n`
-
 ## Iterating through a File
 
-Lets get a quick preview of a for loop by iterating over a text file. First let's make a new text file with some IPython Magic:
-
-```python
-%%writefile test.txt
-First Line
-Second Line
-```
-
-    Overwriting test.txt
+Lets get a quick preview of a for loop by iterating over a text file.
 
 Now we can use a little bit of flow to tell the program to for through every line of the file and do something:
 
@@ -1626,9 +1559,11 @@ for line in open('test.txt'):
     print(line)
 ```
 
-    First Line
-
-    Second Line
+```text
+This is a new line
+This is text being appended to test.txt
+And another line here.
+```
 
 Don't worry about fully understanding this yet, for loops are coming up soon. But we'll break down what we did above. We said that for every line in this text file, go ahead and print that line. It's important to note a few things here:
 
@@ -1642,12 +1577,6 @@ for asdf in open('test.txt'):
     print(asdf)
 ```
 
-    First Line
-
-    Second Line
-
-We'll learn a lot more about this later, but up next: Sets and Booleans!
-
 ---
 
 ---
@@ -1656,7 +1585,7 @@ We'll learn a lot more about this later, but up next: Sets and Booleans!
 
 ## Test your knowledge
 
-** Answer the following questions **
+**Answer the following questions**
 
 Write a brief description of all the following Object Types and Data Structures we've learned about:
 
@@ -1669,35 +1598,31 @@ Hint: This is just to test your memory of the basic arithmetic commands, work ba
 ```python
 # Your answer is probably different
 (60 + (10 ** 2) / 4 * 7) - 134.75
+# 100.25
 ```
-
-    100.25
 
 Answer these 3 questions without typing code. Then type code to check your answer.
 
-    What is the value of the expression 4 * (6 + 5)
-
-    What is the value of the expression 4 * 6 + 5
-
-    What is the value of the expression 4 + 6 * 5
+```text
+What is the value of the expression 4 * (6 + 5)
+What is the value of the expression 4 * 6 + 5
+What is the value of the expression 4 + 6 * 5
+```
 
 ```python
 4 * (6 + 5)
+# 44
 ```
-
-    44
 
 ```python
 4 * 6 + 5
+# 29
 ```
-
-    29
 
 ```python
 4 + 6 * 5
+# 34
 ```
-
-    34
 
 What is the _type_ of the result of the expression 3 + 1.5 + 4?
 
@@ -1708,16 +1633,14 @@ What would you use to find a number’s square root, as well as its square?
 ```python
 # Square root:
 100 ** 0.5
+# 10.0
 ```
-
-    10.0
 
 ```python
 # Square:
 10 ** 2
+# 100
 ```
-
-    100
 
 ## Strings
 
@@ -1728,9 +1651,8 @@ s = 'hello'
 # Print out 'e' using indexing
 
 s[1]
+# 'e'
 ```
-
-    'e'
 
 Reverse the string 'hello' using slicing:
 
@@ -1739,9 +1661,8 @@ s ='hello'
 # Reverse the string using slicing
 
 s[::-1]
+# 'olleh'
 ```
-
-    'olleh'
 
 Given the string 'hello', give two methods of producing the letter 'o' using indexing.
 
@@ -1752,17 +1673,15 @@ s ='hello'
 # Method 1:
 
 s[-1]
+# 'o'
 ```
-
-    'o'
 
 ```python
 # Method 2:
 
 s[4]
+# 'o'
 ```
-
-    'o'
 
 ## Lists
 
@@ -1771,17 +1690,15 @@ Build this list [0,0,0] two separate ways.
 ```python
 # Method 1:
 [0]*3
+# [0, 0, 0]
 ```
-
-    [0, 0, 0]
 
 ```python
 # Method 2:
 list2 = [0,0,0]
 list2
+# [0, 0, 0]
 ```
-
-    [0, 0, 0]
 
 Reassign 'hello' in this nested list to say 'goodbye' instead:
 
@@ -1795,9 +1712,8 @@ list3[2][2] = 'goodbye'
 
 ```python
 list3
+# [1, 2, [3, 4, 'goodbye']]
 ```
-
-    [1, 2, [3, 4, 'goodbye']]
 
 Sort the list below:
 
@@ -1808,17 +1724,15 @@ list4 = [5,3,4,6,1]
 ```python
 # Method 1:
 sorted(list4)
+# [1, 3, 4, 5, 6]
 ```
-
-    [1, 3, 4, 5, 6]
 
 ```python
 # Method 2:
 list4.sort()
 list4
+# [1, 3, 4, 5, 6]
 ```
-
-    [1, 3, 4, 5, 6]
 
 ## Dictionaries
 
@@ -1829,18 +1743,16 @@ d = {'simple_key':'hello'}
 # Grab 'hello'
 
 d['simple_key']
+# 'hello'
 ```
-
-    'hello'
 
 ```python
 d = {'k1':{'k2':'hello'}}
 # Grab 'hello'
 
 d['k1']['k2']
+# 'hello'
 ```
-
-    'hello'
 
 ```python
 # Getting a little tricker
@@ -1850,9 +1762,8 @@ d = {'k1':[{'nest_key':['this is deep',['hello']]}]}
 ```python
 # This was harder than I expected...
 d['k1'][0]['nest_key'][1][0]
+# 'hello'
 ```
-
-    'hello'
 
 ```python
 # This will be hard and annoying!
@@ -1862,13 +1773,12 @@ d = {'k1':[1,2,{'k2':['this is tricky',{'tough':[1,2,['hello']]}]}]}
 ```python
 # Phew!
 d['k1'][2]['k2'][1]['tough'][2][0]
+# 'hello'
 ```
-
-    'hello'
 
 Can you sort a dictionary? Why or why not?
 
-**Answer: No! Because normal dictionaries are _mappings_ not a sequence. **
+**Answer: No! Because normal dictionaries are _mappings_ not a sequence.**
 
 ## Tuples
 
@@ -1896,86 +1806,93 @@ list5 = [1,2,2,33,4,4,11,22,3,3,2]
 
 ```python
 set(list5)
+# {1, 2, 3, 4, 11, 22, 33}
 ```
-
-    {1, 2, 3, 4, 11, 22, 33}
 
 ## Booleans
 
 For the following quiz questions, we will get a preview of comparison operators. In the table below, a=3 and b=4.
 
 <table class="table table-bordered">
-<tr>
-<th style="width:10%">Operator</th><th style="width:45%">Description</th><th>Example</th>
-</tr>
-<tr>
-<td>==</td>
-<td>If the values of two operands are equal, then the condition becomes true.</td>
-<td> (a == b) is not true.</td>
-</tr>
-<tr>
-<td>!=</td>
-<td>If values of two operands are not equal, then condition becomes true.</td>
-<td> (a != b) is true.</td>
-</tr>
-<tr>
-<td>&gt;</td>
-<td>If the value of left operand is greater than the value of right operand, then condition becomes true.</td>
-<td> (a &gt; b) is not true.</td>
-</tr>
-<tr>
-<td>&lt;</td>
-<td>If the value of left operand is less than the value of right operand, then condition becomes true.</td>
-<td> (a &lt; b) is true.</td>
-</tr>
-<tr>
-<td>&gt;=</td>
-<td>If the value of left operand is greater than or equal to the value of right operand, then condition becomes true.</td>
-<td> (a &gt;= b) is not true. </td>
-</tr>
-<tr>
-<td>&lt;=</td>
-<td>If the value of left operand is less than or equal to the value of right operand, then condition becomes true.</td>
-<td> (a &lt;= b) is true. </td>
-</tr>
+  <tr>
+    <th style="width: 10%">Operator</th>
+    <th style="width: 45%">Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>==</td>
+    <td>
+      If the values of two operands are equal, then the condition becomes true.
+    </td>
+    <td>(a == b) is not true.</td>
+  </tr>
+  <tr>
+    <td>!=</td>
+    <td>
+      If values of two operands are not equal, then condition becomes true.
+    </td>
+    <td>(a != b) is true.</td>
+  </tr>
+  <tr>
+    <td>&gt;</td>
+    <td>
+      If the value of left operand is greater than the value of right operand,
+      then condition becomes true.
+    </td>
+    <td>(a &gt; b) is not true.</td>
+  </tr>
+  <tr>
+    <td>&lt;</td>
+    <td>
+      If the value of left operand is less than the value of right operand, then
+      condition becomes true.
+    </td>
+    <td>(a &lt; b) is true.</td>
+  </tr>
+  <tr>
+    <td>&gt;=</td>
+    <td>
+      If the value of left operand is greater than or equal to the value of
+      right operand, then condition becomes true.
+    </td>
+    <td>(a &gt;= b) is not true.</td>
+  </tr>
+  <tr>
+    <td>&lt;=</td>
+    <td>
+      If the value of left operand is less than or equal to the value of right
+      operand, then condition becomes true.
+    </td>
+    <td>(a &lt;= b) is true.</td>
+  </tr>
 </table>
 
 What will be the resulting Boolean of the following pieces of code (answer fist then check by typing it in!)
 
 ```python
-# Answer before running cell
 2 > 3
+# False
 ```
 
-    False
-
 ```python
-# Answer before running cell
 3 <= 2
+# False
 ```
 
-    False
-
 ```python
-# Answer before running cell
 3 == 2.0
+# False
 ```
 
-    False
-
 ```python
-# Answer before running cell
 3.0 == 3
+# True
 ```
-
-    True
 
 ```python
-# Answer before running cell
 4**0.5 != 2
+# False
 ```
-
-    False
 
 Final Question: What is the boolean output of the cell block below?
 
@@ -1986,9 +1903,8 @@ l_two = [1,2,{'k1':4}]
 
 # True or False?
 l_one[2][0] >= l_two[2]['k1']
+# False
 ```
-
-    False
 
 ---
 
